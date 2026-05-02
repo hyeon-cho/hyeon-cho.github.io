@@ -1,0 +1,485 @@
+<!DOCTYPE HTML>
+<html lang="en">
+
+<head>
+
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+  <title>Hyunmin Cho</title>
+
+  <link rel="stylesheet" type="text/css" href="stylesheet.css">
+  <link href="css/bootstrap.min.css" rel="stylesheet" media="screen">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+
+  <meta name="author" content="Hyunmin Cho">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <link rel="stylesheet" type="text/css" href="stylesheet.css">
+  <link rel="icon" type="image/png" href="images/star.png">
+  <style>
+    .container {
+      display: flex;
+      flex-wrap: wrap;
+      width: 100%;
+      border: 0px;
+      border-spacing: 0px;
+      border-collapse: separate;
+      margin-right: auto;
+      margin-left: auto;
+      align-items: center;
+      /* Center-aligns items vertically in desktop mode */
+    }
+
+    .text-content {
+      padding: 2.5%;
+      width: 63%;
+      vertical-align: middle;
+      order: 1;
+    }
+
+    .image-content {
+      padding: 2.5%;
+      width: 37%;
+      max-width: 37%;
+      order: 2;
+      display: flex;
+      justify-content: center;
+      /* Center-aligns image horizontally */
+    }
+
+    .image-content img {
+      width: 100%;
+      max-width: 100%;
+    }
+
+    @media screen and (max-width: 768px) {
+
+      .text-content,
+      .image-content {
+        width: 100%;
+        max-width: 100%;
+        order: 1;
+      }
+
+      .image-content {
+        order: 2;
+        display: flex;
+        justify-content: center;
+        /* Center-aligns image horizontally in mobile mode */
+      }
+
+      .image-content img {
+        width: auto;
+        max-width: 100%;
+        height: auto;
+        max-height: 300px;
+        /* Adjust this value as needed */
+      }
+    }
+  </style>
+</head>
+
+<body class="bg_colour">
+  <table <table border=0 class="bg_colour"
+    style="width:100%;max-width:800px;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
+    <tbody>
+      <tr style="padding:0px">
+        <td style="padding:0px">
+          <div class="container">
+            <div class="text-content">
+              <p style="text-align:left">
+                <name>Hyunmin Cho</name>
+              </p>
+              <p>Hi! I'm a integrated MS&Ph.D student at <a href="https://www.korea.edu/sites/en/index.do">Korea
+                  University</a>, <a href="https://ipa.korea.ac.kr/">Image Processing Algorithm Lab.</a> advised by
+                Prof. <a href="https://scholar.google.com/citations?user=aLYNnyoAAAAJ&hl=en">Kyong Hwan Jin</a>.
+              </p>
+
+              <p>
+                My ultimate goal is to bridge the gap between human imagination and digital reality,
+                creating a world that is <strong>seamlessly modifiable according to user intention</strong>.
+                To that end, my research focuses on <strong>Generative Models</strong> and
+                <strong>Controllable Generation</strong>, with an emphasis on understanding the internal
+                dynamics of diffusion models and developing principled, training-free methods that steer
+                sampling toward more faithful, diverse, and hallucination-resistant outputs.
+              </p>
+              <p>Feel free to send me an e-mail if you want to have a chat!<br><b>Contact</b>: hyun_cho@korea.ac.kr</p>
+
+
+              <p style="text-align:center">
+                <a href="files/cv.pdf" target="_blank" style="text-decoration:none;">
+                  <i class="ai ai-cv" style="font-size:2.5em; color:#898484; margin: 0 10px;"></i>
+                </a>
+
+                <a href="mailto:hyun_cho@korea.ac.kr" style="text-decoration:none;">
+                  <i class="fas fa-envelope" style="font-size:2.5em; color:#898484; margin: 0 10px;"></i>
+                </a>
+
+                <a href="https://scholar.google.com/citations?user=MRz6g3QAAAAJ&hl=ko" target="_blank"
+                  style="text-decoration:none;">
+                  <i class="ai ai-google-scholar" style="font-size:2.5em; color:#898484; margin: 0 10px;"></i>
+                </a>
+
+                <a href="https://www.linkedin.com/in/chohyunmin/" target="_blank" style="text-decoration:none;">
+                  <i class="fab fa-linkedin" style="font-size:2.5em; color:#898484; margin: 0 10px;"></i>
+                </a>
+
+                <a href="https://github.com/hyeon-cho" target="_blank" style="text-decoration:none;">
+                  <i class="fab fa-github" style="font-size:2.5em; color:#898484; margin: 0 10px;"></i>
+                </a>
+              </p>
+            </div>
+            <div class="image-content">
+              <a href="images/hyuncho.JPG"><img alt="profile photo" src="images/hyuncho.JPG" class="hoverZoomLink"></a>
+            </div>
+          </div>
+          <hr class="soft">
+
+          <button style="border:0px transparent; background-color: transparent;outline:none;" type="button"
+            class="collapsible" data-toggle="collapse" data-target="#content-research" id="research">
+            <heading>Publications</heading>
+          </button>
+          <div id="content-research" class="collapse in">
+            <table
+              style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
+              <tbody>
+                <tr>
+                  <td style="padding:20px;width:25%;vertical-align:middle">
+                    <div class="one">
+                      <img src='images/icml26_18925.png' width="170" style="border-radius:10px;">
+                    </div>
+                  </td>
+                  <td style="padding:20px;width:75%;vertical-align:middle">
+                    <a href="https://ipa.korea.ac.kr">
+                      <papertitle>Balancing Fidelity and Diversity in Diffusion Models via Symmetric Attention
+                        Decomposition: Hopfield Perspective
+                      </papertitle>
+                    </a>
+                    <br>
+                    <strong>Hyunmin Cho</strong>,
+                    Woo Kyoung Han, and
+                    <a href="https://scholar.google.com/citations?user=aLYNnyoAAAAJ&hl">Kyong Hwan Jin<sup>†</sup></a>
+                    <br>
+                    <em>43rd International Conference on Machine Learning <strong>(<u>ICML</u>)</strong></em>,
+                    2026.
+                    <br>
+                    <a href="https://ipa.korea.ac.kr">Paper</a> / <a href="https://ipa.korea.ac.kr">Website</a>
+                    / <a href="https://github.com/hyeon-cho/Attention-Symmetric-Decomposition">Code</a>
+                    <p>We characterize the pre-softmax attention matrix <strong>QK</strong> in transformers as an
+                      associative memory matrix encoding pairwise associations between input features.
+                    </p>
+                  </td>
+                </tr>
+                <tr>
+                  <td style="padding:20px;width:25%;vertical-align:middle">
+                    <div class="one">
+                      <img src='images/icml26_18956.png' width="170" style="border-radius:10px;">
+                    </div>
+                  </td>
+                  <td style="padding:20px;width:75%;vertical-align:middle">
+                    <a href="https://hyeon-cho.github.io/TAG/">
+                      <papertitle>TAG: Tangential Amplifying Guidance for Hallucination-Resistant Sampling
+                      </papertitle>
+                    </a>
+                    <br>
+                    <strong>Hyunmin Cho<sup>*</sup></strong>,
+                    <a href="https://sunovivid.github.io/">Donghoon Ahn<sup>*</sup></a>,
+                    <a href="https://susunghong.github.io/">Susung Hong<sup>*</sup></a>,
+                    Jee Eun Kim,
+                    <a href="https://cvlab.kaist.ac.kr/">Seungryong Kim<sup>†</sup></a>, and
+                    <a href="https://scholar.google.com/citations?user=aLYNnyoAAAAJ&hl">Kyong Hwan Jin<sup>†</sup></a>
+                    <br>
+                    <em>43rd International Conference on Machine Learning <strong>(<u>ICML</u>)</strong></em>,
+                    2026.
+                    <br>
+                    <a href="https://huggingface.co/papers/2510.04533">Paper</a> / <a
+                      href="https://hyeon-cho.github.io/TAG/">Website</a>
+                    / <a href="https://github.com/hyeon-cho/Tangential-Amplifying-Guidance">Code</a>
+                    <p>We introduce <strong>TAG</strong>, a theoretically grounded, training-free, computationally
+                      lightweight, and architecture-agnostic
+                      guidance method that operates solely on trajectory signals without modifying the underlying
+                      diffusion model.
+                    </p>
+                  </td>
+                </tr>
+                <!-- <tr onmouseout="ios_stop()" onmouseover="ios_start()">
+                  <td style="padding:20px;width:25%;vertical-align:middle">
+                    <div class="one">
+                      <div class="two" id='ios_image' style="opacity: 0;">
+                        <img src='images/ios.gif' width="170">
+                      </div>
+                      <img src='images/ios.png' width="170">
+                    </div>
+                    <script type="text/javascript">
+                      function ios_start() {
+                        document.getElementById('ios_image').style.opacity = "1";
+                      }
+                      function ids_stop() {
+                        document.getElementById('ios_image').style.opacity = "0";
+                      }
+                      ios_stop()
+                    </script>
+                  </td>
+                  <td style="padding:20px;width:75%;vertical-align:middle">
+                    <a
+                      href="https://www.dbpia.co.kr/journal/articleDetail?nodeId=NODE12332217&buildDate=2026-01-06+16%3A14%3A45&nowDate=20260120_1&cdnUrl=https%3A%2F%2Fcdn.dbpia.co.kr%2Fstatic&appVersion=1.0.0&buildTime=20260106161445&minify=.min&nodeId=NODE12332217&mobileYN=N&medaTypeCode=185005&isPDFSizeAllowed=true&locale=ko&foreignIpYn=N&articleTitle=iOS%3A+3D%EC%97%90%EC%84%9C%EC%9D%98+%EB%B0%98%EB%B3%B5+%EC%B5%9C%EC%A0%81%ED%99%94+%EC%83%98%ED%94%8C%EB%A7%81&articleTitleEn=iOS%3A+3D+iterative+Optimization+Sampling&voisId=VOIS00779192&voisName=2025%EB%85%84%EB%8F%84+%EB%8C%80%ED%95%9C%EC%A0%84%EC%9E%90%EA%B3%B5%ED%95%99%ED%9A%8C+%ED%95%98%EA%B3%84%ED%95%99%EC%88%A0%EB%8C%80%ED%9A%8C+%EB%85%BC%EB%AC%B8%EC%A7%91&voisCnt=1327&searchResultKey=%2FlMfWK6MWZi5N74t6Fqz8fwCSQRRtcMRKeD%2FkIVvWQ%2FXA%2Bgs%2FE0dPC9Ak847OmM3&language=ko_KR&hasTopBanner=true">
+                      <papertitle>iOS: 3D iterative Optimization Sampling
+                      </papertitle>
+                    </a>
+                    <br>
+                    <strong>Jiwon Kim</strong>,
+                    <a href="https://scholar.google.com/citations?user=MRz6g3QAAAAJ&hl">Hyunmin Cho</a>,
+                    Pureum Kim,
+                    <a href="https://scholar.google.com/citations?user=aLYNnyoAAAAJ&hl">Kyong Hwan Jin<sup>†</sup></a>
+                    <br>
+                    <em>IEIE summer</em>, 2025.
+                    <br>
+                    <a
+                      href="https://www.dbpia.co.kr/journal/articleDetail?nodeId=NODE12332217&buildDate=2026-01-06+16%3A14%3A45&nowDate=20260120_1&cdnUrl=https%3A%2F%2Fcdn.dbpia.co.kr%2Fstatic&appVersion=1.0.0&buildTime=20260106161445&minify=.min&nodeId=NODE12332217&mobileYN=N&medaTypeCode=185005&isPDFSizeAllowed=true&locale=ko&foreignIpYn=N&articleTitle=iOS%3A+3D%EC%97%90%EC%84%9C%EC%9D%98+%EB%B0%98%EB%B3%B5+%EC%B5%9C%EC%A0%81%ED%99%94+%EC%83%98%ED%94%8C%EB%A7%81&articleTitleEn=iOS%3A+3D+iterative+Optimization+Sampling&voisId=VOIS00779192&voisName=2025%EB%85%84%EB%8F%84+%EB%8C%80%ED%95%9C%EC%A0%84%EC%9E%90%EA%B3%B5%ED%95%99%ED%9A%8C+%ED%95%98%EA%B3%84%ED%95%99%EC%88%A0%EB%8C%80%ED%9A%8C+%EB%85%BC%EB%AC%B8%EC%A7%91&voisCnt=1327&searchResultKey=%2FlMfWK6MWZi5N74t6Fqz8fwCSQRRtcMRKeD%2FkIVvWQ%2FXA%2Bgs%2FE0dPC9Ak847OmM3&language=ko_KR&hasTopBanner=true">Paper</a>
+                    <p>We introduce iOS, a 3D iterative optimization sampling framework that utilizes Fixed-Point
+                      Iterative Regularization to preserve source identity and structural consistency in text-guided 3D
+                      editing.</p>
+                  </td>
+                </tr> -->
+                <tr>
+                  <td style="padding:20px;width:25%;vertical-align:middle">
+                    <div class="one">
+                      <img src='images/iccv_sr.png' width="180" style="border-radius:10px;">
+                    </div>
+                  </td>
+                  <td style="padding:20px;width:75%;vertical-align:middle">
+                    <a href="https://byeonghunlee12.github.io/iRAG_page/">
+                      <papertitle>Reference-based Super-Resolution via Image-based Retrieval-Augmented Generation
+                        Diffusion
+                      </papertitle>
+                    </a>
+                    <br>
+                    <a href="https://scholar.google.com/citations?user=0VhcJXwAAAAJ&hl=ko">Byeonghun
+                      Lee<sup>*</sup></a>,
+                    <strong>Hyunmin Cho<sup>*</sup></strong>,
+                    Hong Gyu Choi,
+                    Soo Min Kang,
+                    Iljun Ahn, and
+                    <a href="https://scholar.google.com/citations?user=aLYNnyoAAAAJ&hl">Kyong Hwan Jin<sup>†</sup></a>
+                    <br>
+                    <em>20th International Conference on Computer Vision <strong>(<u>ICCV</u>)</strong></em>, 2025.
+                    <br>
+                    <a
+                      href="https://openaccess.thecvf.com/content/ICCV2025/papers/Lee_Reference-based_Super-Resolution_via_Image-based_Retrieval-Augmented_Generation_Diffusion_ICCV_2025_paper.pdf">Paper</a>
+                    / <a href="https://shhh0620.github.io/IDS/">Website</a>
+                    / <a href="https://github.com/shhh0620/IDS">Code</a>
+                    <p>We propose an image-based RAG framework <strong>(iRAG)</strong> for realistic super-resolution,
+                      which employs a trainable hashing function to retrieve either real-world or generated references
+                      given an LR query.
+                    </p>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <hr class="soft">
+          <!-- 
+          <button style="border:0px transparent; background-color: transparent;outline:none;" type="button"
+            class="collapsible" data-toggle="collapse" data-target="#content-experience" id="experience">
+            <heading>Experience</heading>
+          </button>
+          <div id="content-experience" class="collapse in">
+
+            <table border=0 class="bg_colour"
+              style="padding:20px;width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
+              <tbody>
+
+                <tr>
+                  <td style="padding:10px;width:25%;vertical-align:middle">
+                    <div class="one">
+                      <img src='images/naver_labs.png' width="120">
+                    </div>
+                  </td>
+                  <td style="padding:10px;width:75%;vertical-align:top">
+                    <papertitle style="color:gray"><big>Research Intern</big> </papertitle>
+                    <papertitle><big> | NAVER LABS</big></papertitle>
+                    <br>
+                    2026 Jan - Current
+                    <br>
+                    <br>
+                    <p>On Road Intelligence team</p>
+                  </td>
+                </tr>
+
+              </tbody>
+            </table>
+          </div>
+          <hr class="soft"> -->
+
+          <button style="border:0px transparent; background-color: transparent;outline:none;" type="button"
+            class="collapsible" data-toggle="collapse" data-target="#content-education" id="education">
+            <heading>Education</heading>
+          </button>
+          <div id="content-education" class="collapse in">
+
+            <table border=0 class="bg_colour"
+              style="padding:20px;width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
+              <tbody>
+
+                <tr>
+                  <td style="padding:10px;width:25%;vertical-align:middle">
+                    <div class="one">
+                      <img src='images/korea_univ.png' width="120">
+                    </div>
+                  </td>
+                  <td style="padding:10px;width:75%;vertical-align:top">
+                    <papertitle style="color:gray"><big>Integrated M.S & Ph.D in Electrical Engineering</big>
+                    </papertitle>
+                    <papertitle><big> | Korea University</big></papertitle>
+                    <br>
+                    Mar 2024 - cont.
+                    <br>
+                    <br>
+                    <strong>Research: </strong> Generative Model & Hopfield Model
+                    <br>
+                    <strong>Advisor: </strong> Prof. <a href="https://ipa.korea.ac.kr/">Kyong Hwan Jin</a></li>
+                  </td>
+                </tr>
+
+                <tr>
+                  <td style="padding:10px;width:25%;vertical-align:middle">
+                    <div class="one">
+                      <img src='images/gachon_univ.png' width="120">
+                    </div>
+                  </td>
+                  <td style="padding:10px;width:75%;vertical-align:top">
+                    <papertitle style="color:gray"><big>B.S in Software</big> </papertitle>
+                    <papertitle><big> | Gachon University</big></papertitle>
+                    <br>
+                    Mar 2020 - Feb 2024
+                    <br>
+                    <br>
+                    <strong>Research:</strong> Image Super Resolution
+                    <br>
+                    <strong>Advisor: </strong> Prof. <a href="https://sites.google.com/view/aikiho/professor">Kiho
+                      Choi</a> (currently in Kyung Hee University)
+                    <!-- <br>
+                    <br>
+                    <ul>
+                      <li style="margin-bottom: 5px;">
+                        <strong>Jiwon Kim</strong>, Ahyeon Kim, Weduke Cho<sup>†</sup>, <br>
+                        "A Study on Aging Health Measurement Technology Using Image-Based Hand Function Test",
+                        <em>CEIC</em>, 2023
+                      </li>
+                      <li>
+                        Weduke Cho<sup>†</sup>, Kyuhyung Kim, Ahyeon Kim, <strong>Jiwon Kim</strong>, <br>
+                        "Research on Criteria for Selecting Videos that Elicit Happiness and Fear: Based on Heart Rate
+                        Measurement", <em>KICS</em>, 2023
+                      </li>
+                    </ul> -->
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <hr class="soft">
+
+          <button style="border:0px transparent; background-color: transparent;outline:none;" type="button"
+            class="collapsible" data-toggle="collapse" data-target="#content-award" id="award">
+            <heading>Awards</heading>
+          </button>
+          <div id="content-award" class="collapse in">
+            <table border=0 class="bg_colour"
+              style="padding:20px;width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
+              <tbody>
+
+                <tr>
+                  <td>
+                    <ul>
+                      <!-- <li><strong>Best Paper Award</strong>, Summer Annual Conference of IEIE, 2025</li> -->
+                      <li><strong>Gold Prize</strong>, 38th Workshop of Image Processing and Image
+                        Understanding (IPIU), 2026</li>
+                    </ul>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <hr class="soft">
+
+          <button style="border:0px transparent; background-color: transparent;outline:none;" type="button"
+            class="collapsible" data-toggle="collapse" data-target="#content-project" id="project">
+            <heading>Project</heading>
+          </button>
+          <div id="content-project" class="collapse in">
+            <table border=0 class="bg_colour"
+              style="padding:20px;width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
+              <tbody>
+
+                <tr>
+                  <td>
+                    <ul>
+                      <li><strong>Samsung Research</strong>, Next Generation Display Lab, (confidential contents),
+                        2024.06-2025.05</li>
+                    </ul>
+                    <ul>
+                      <li><strong>Samsung Research</strong>, Next Generation Display Lab, (confidential contents),
+                        2026.01-2026.12</li>
+                    </ul>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <hr class="soft">
+
+          <button style="border:0px transparent; background-color: transparent;outline:none;" type="button"
+            class="collapsible" data-toggle="collapse" data-target="#content-patent" id="patent">
+            <heading>Patents</heading>
+          </button>
+          <div id="content-patent" class="collapse in">
+            <table border=0 class="bg_colour"
+              style="padding:20px;width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
+              <tbody>
+
+                <tr>
+                  <td>
+                    <ul>
+                      <li style="margin-bottom: 10px;"> Method and Apparatus for Lossless Implicit Neural Representation
+                        Based on Bipolar Vector Labeling and Recursive Single Weight Operation
+                        <br>
+                        <a href="https://scholar.google.com/citations?user=MRz6g3QAAAAJ&hl">Hyunmin Cho</a>,
+                        <a href="https://scholar.google.com/citations?user=aLYNnyoAAAAJ&hl">Kyong Hwan Jin</a>,
+                        Yongjun Lee,
+                        <strong>Jiwon Kim</strong>,
+                        <a href="https://scholar.google.com/citations?user=kieVQZwAAAAJ&hl">Woo Kyoung Han</a>
+                        <br>
+                        <span style="color:gray; font-size:small;">Korea Patent Application No. 10-2025-0150878</span>
+                      </li>
+                    </ul>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <hr class="soft">
+
+          <table
+            style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
+            <tbody>
+              <tr>
+                <td style="padding:0px">
+                  <br>
+                  <p style="text-align:right;font-size:small;">
+                    Website templates from <a href="https://jonbarron.info/" target="_blank">Jon Barron</a>.</p>
+                </td>
+                </p>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+  </td>
+  </tr>
+  </table>
+</body>
+
+</html>
