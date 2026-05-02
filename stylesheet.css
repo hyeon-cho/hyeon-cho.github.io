@@ -157,3 +157,17 @@ table tbody tr td td hr.soft {
   width: 100%;
   background-color: #dfdfdf
 }
+
+a {
+  color: rgb(23, 53, 122);
+  /* icmlblue */
+}
+
+a:visited {
+  color: rgb(23, 53, 122);
+}
+
+a:hover {
+  color: rgb(139, 26, 26);
+  /* icmlred */
+}
