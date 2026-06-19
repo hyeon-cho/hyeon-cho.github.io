@@ -141,20 +141,45 @@
 
           <button style="border:0px transparent; background-color: transparent;outline:none;" type="button"
             class="collapsible" data-toggle="collapse" data-target="#content-research" id="research">
-            <heading>Publications</heading>
+            <heading>Lead-Author Publications</heading>
           </button>
           <div id="content-research" class="collapse in">
             <table
               style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
               <tbody>
                 <tr>
-                  <td style="padding:20px;width:25%;vertical-align:middle">
+                  <td style="padding:20px;width:25%;vertical-align:middle;text-align:center">
+                    <div class="one">
+                      <img src='images/eccv26_12459.png' width="180" style="border-radius:10px;">
+                    </div>
+                  </td>
+                  <td style="padding:20px;width:75%;vertical-align:middle">
+                    <a href="https://hyeon-cho.github.io/Harmonic-line-Spectrum/">
+                      <papertitle>Recurrent Sinusoidal INRs for Efficient High-Fidelity Representation: Harmonic-line Spectrum Perspective</papertitle>
+                    </a>
+                    <br>
+                    <strong>Hyunmin Cho</strong>,
+                    <a href="https://sites.google.com/view/jaejunyoo">Jaejun Yoo</a>, and
+                    <a href="https://scholar.google.com/citations?user=aLYNnyoAAAAJ&hl">Kyong Hwan Jin<sup>†</sup></a>
+                    <br>
+                    <em>19th European Conference on Computer Vision <strong>(<u>ECCV</u>)</strong></em>, 2026.
+                    <br>
+                    <a href="https://ipa.korea.ac.kr">Paper (coming soon)</a> / <a href="https://hyeon-cho.github.io/Harmonic-line-Spectrum/">Website</a>
+                    / <a href="https://github.com/hyeon-cho/Harmonic-Siren">Code</a>
+                    <p>Reusing one sinusoidal block recurrently expands spectral support without extra parameters: 
+                      by <strong>Jacobi-Anger</strong>, each sine step creates new frequency combinations. 
+                      <!-- Support rises 30.9%→94.6%, while iterative-SIREN saturates and non-sinusoidal recurrence collapses. -->
+                    </p>
+                  </td>
+                </tr>
+                <tr>
+                  <td style="padding:20px;width:25%;vertical-align:middle;text-align:center">
                     <div class="one">
                       <img src='images/icml26_18925.png' width="170" style="border-radius:10px;">
                     </div>
                   </td>
                   <td style="padding:20px;width:75%;vertical-align:middle">
-                    <a href="https://ipa.korea.ac.kr">
+                    <a href="https://hyeon-cho.github.io/Balancing/">
                       <papertitle>Balancing Fidelity and Diversity in Diffusion Models via Symmetric Attention
                         Decomposition: Hopfield Perspective
                       </papertitle>
@@ -175,7 +200,7 @@
                   </td>
                 </tr>
                 <tr>
-                  <td style="padding:20px;width:25%;vertical-align:middle">
+                  <td style="padding:20px;width:25%;vertical-align:middle;text-align:center">
                     <div class="one">
                       <img src='images/icml26_18956.png' width="170" style="border-radius:10px;">
                     </div>
@@ -192,7 +217,7 @@
                     Jee Eun Kim,
                     <a href="https://cvlab.kaist.ac.kr/">Seungryong Kim<sup>†</sup></a>, and
                     <a href="https://scholar.google.com/citations?user=aLYNnyoAAAAJ&hl">Kyong Hwan Jin<sup>†</sup></a>
-                    <span style="color: #c49a00; font-weight: 600;">(*denotes equal contributions)</span>
+                    <span style="color: rgb(204, 85, 85);font-weight: 600;">(* denotes co-first authors)</span>
                     <br>
                     <em>43rd International Conference on Machine Learning <strong>(<u>ICML</u>)</strong></em>,
                     2026.
@@ -208,7 +233,7 @@
                   </td>
                 </tr>
                 <!-- <tr onmouseout="ios_stop()" onmouseover="ios_start()">
-                  <td style="padding:20px;width:25%;vertical-align:middle">
+                  <td style="padding:20px;width:25%;vertical-align:middle;text-align:center">
                     <div class="one">
                       <div class="two" id='ios_image' style="opacity: 0;">
                         <img src='images/ios.gif' width="170">
@@ -246,40 +271,6 @@
                       editing.</p>
                   </td>
                 </tr> -->
-                <tr>
-                  <td style="padding:20px;width:25%;vertical-align:middle">
-                    <div class="one">
-                      <img src='images/iccv_sr.png' width="180" style="border-radius:10px;">
-                    </div>
-                  </td>
-                  <td style="padding:20px;width:75%;vertical-align:middle">
-                    <a href="https://byeonghunlee12.github.io/iRAG_page/">
-                      <papertitle>Reference-based Super-Resolution via Image-based Retrieval-Augmented Generation
-                        Diffusion
-                      </papertitle>
-                    </a>
-                    <br>
-                    <a href="https://scholar.google.com/citations?user=0VhcJXwAAAAJ&hl=ko">Byeonghun
-                      Lee<sup>*</sup></a>,
-                    <strong>Hyunmin Cho<sup>*</sup></strong>,
-                    Hong Gyu Choi,
-                    Soo Min Kang,
-                    Iljun Ahn, and
-                    <a href="https://scholar.google.com/citations?user=aLYNnyoAAAAJ&hl">Kyong Hwan Jin<sup>†</sup></a>
-                    <span style="color: #c49a00; font-weight: 600;">(*denotes equal contributions)</span>
-                    <br>
-                    <em>20th International Conference on Computer Vision <strong>(<u>ICCV</u>)</strong></em>, 2025.
-                    <br>
-                    <a
-                      href="https://openaccess.thecvf.com/content/ICCV2025/papers/Lee_Reference-based_Super-Resolution_via_Image-based_Retrieval-Augmented_Generation_Diffusion_ICCV_2025_paper.pdf">Paper</a>
-                    / <a href="https://byeonghunlee12.github.io/iRAG_page/">Website</a>
-                    / <a href="https://github.com/ByeonghunLee12/iRAG">Code</a>
-                    <p>We propose an image-based RAG framework <strong>(iRAG)</strong> for realistic super-resolution,
-                      which employs a trainable hashing function to retrieve either real-world or generated references
-                      given an LR query.
-                    </p>
-                  </td>
-                </tr>
               </tbody>
             </table>
           </div>
@@ -318,15 +309,75 @@
           <hr class="soft"> -->
           <button style="border:0px transparent; background-color: transparent;outline:none;" type="button"
             class="collapsible" data-toggle="collapse" data-target="#content-research" id="research">
-            <heading>Co-authored Publications</heading>
+            <heading>Collaborative Publications</heading>
           </button>
           <div id="content-research" class="collapse in">
             <table
               style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
               <tbody>
+                <tr>
+                  <td style="padding:20px;width:25%;vertical-align:middle;text-align:center">
+                    <div class="one">
+                      <!-- <video autoplay loop muted playsinline
+                        style="max-width:170px;max-height:170px;border-radius:10px;">
+                        <source src="images/eccv26_8420.png" type="video/mp4">
+                      </video> -->
+                      <img src='images/eccv26_8420.png' width="180" style="border-radius:10px;">
+                    </div>
+                  </td>
+                  <td style="padding:20px;width:75%;vertical-align:middle">
+                    <papertitle>ReAL: Reference-to-Image (R2I) Aware Latent Diffusion for Iamge Super-Resolution</papertitle>
+                    <br>
+                    <a href="https://scholar.google.com/citations?user=0VhcJXwAAAAJ&hl=ko">Byeonghun Lee</a>,
+                    <strong>Hyunmin Cho</strong>,
+                    Sunghoon Im<sup>†</sup>, and
+                    <a href="https://scholar.google.com/citations?user=aLYNnyoAAAAJ&hl">Kyong Hwan Jin<sup>†</sup></a>
+                    <br>
+                    <em>19th European Conference on Computer Vision <strong>(<u>ECCV</u>)</strong></em>, 2026.
+                    <br>
+                    <a href="https://ipa.korea.ac.kr">Project (coming soon)</a>
+                    <p><strong>ReAL grounds diffusion SR in retrieved visual references rather than text priors.</strong> It encodes a matched reference once and reuses its cached attention features throughout denoising, enabling reference-driven texture and structure recovery without CFG.
+                    </p>
+                  </td>
+                </tr>
 
                 <tr>
-                  <td style="padding:20px;width:25%;vertical-align:middle">
+                  <td style="padding:20px;width:25%;vertical-align:middle;text-align:center">
+                    <div class="one">
+                      <img src='images/iccv_sr.png' width="180" style="border-radius:10px;">
+                    </div>
+                  </td>
+                  <td style="padding:20px;width:75%;vertical-align:middle">
+                    <a href="https://byeonghunlee12.github.io/iRAG_page/">
+                      <papertitle>Reference-based Super-Resolution via Image-based Retrieval-Augmented Generation
+                        Diffusion
+                      </papertitle>
+                    </a>
+                    <br>
+                    <a href="https://scholar.google.com/citations?user=0VhcJXwAAAAJ&hl=ko">Byeonghun
+                      Lee<sup>*</sup></a>,
+                    <strong>Hyunmin Cho<sup>*</sup></strong>,
+                    Hong Gyu Choi,
+                    Soo Min Kang,
+                    Iljun Ahn, and
+                    <a href="https://scholar.google.com/citations?user=aLYNnyoAAAAJ&hl">Kyong Hwan Jin<sup>†</sup></a>
+                    <span style="color: rgb(204, 85, 85);font-weight: 600;">(* denotes co-first authors)</span>
+                    <br>
+                    <em>20th International Conference on Computer Vision <strong>(<u>ICCV</u>)</strong></em>, 2025.
+                    <br>
+                    <a
+                      href="https://openaccess.thecvf.com/content/ICCV2025/papers/Lee_Reference-based_Super-Resolution_via_Image-based_Retrieval-Augmented_Generation_Diffusion_ICCV_2025_paper.pdf">Paper</a>
+                    / <a href="https://byeonghunlee12.github.io/iRAG_page/">Website</a>
+                    / <a href="https://github.com/ByeonghunLee12/iRAG">Code</a>
+                    <p>We propose an image-based RAG framework <strong>(iRAG)</strong> for realistic super-resolution,
+                      which employs a trainable hashing function to retrieve either real-world or generated references
+                      given an LR query.
+                    </p>
+                  </td>
+                </tr>
+
+                <tr>
+                  <td style="padding:20px;width:25%;vertical-align:middle;text-align:center">
                     <div class="one">
                       <video autoplay loop muted playsinline
                         style="max-width:170px;max-height:170px;border-radius:10px;">
@@ -353,7 +404,6 @@
                     </p>
                   </td>
                 </tr>
-
               </tbody>
             </table>
           </div>
@@ -440,7 +490,7 @@
                     <ul>
                       <!-- <li><strong>Best Paper Award</strong>, Summer Annual Conference of IEIE, 2025</li> -->
                       <li><strong>Gold Prize</strong>, 38th Workshop of Image Processing and Image
-                        Understanding (IPIU), 2026</li>
+                        Understanding (IPIU), 2026 <a href="https://ipa.korea.ac.kr/award/ipiu26_cho.pdf">🏆 [IMG]</a></li>
                     </ul>
                   </td>
                 </tr>
