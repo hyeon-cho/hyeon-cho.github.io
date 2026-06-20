@@ -200,15 +200,15 @@ a:hover {
   background: rgba(35, 67, 139, 0.025);
 }
 
-.publication-visual {
+/* .publication-visual {
   width: 25%;
   padding: 20px;
   vertical-align: middle;
   text-align: center;
-}
+} */
 
 .publication-content {
-  width: 75%;
+  width: 100%;
   padding: 20px;
   vertical-align: middle;
 }
@@ -334,9 +334,10 @@ a:hover {
   padding: 3px 0 3px 16px;
 
   border-left: 3px solid #222;
+  background: #f5f6f8;
 
   color: #3d4149;
-  font-size: 14px;
+  font-size: 13px;
   font-weight: 400;
   line-height: 1.6;
 }
@@ -464,4 +465,34 @@ width: 100%;
 .profile-photo {
 width: 230px;
 }
+}
+
+.profile-container {
+  flex-wrap: nowrap; /* 사진을 아래로 내리지 않음 */
+  align-items: flex-start;
+  gap: 32px;
+}
+
+.profile-container .text-content {
+  flex: 1;
+  min-width: 0;
+}
+
+.profile-container .image-content {
+  flex: 0 0 270px;
+}
+
+.profile-container .image-content img {
+  display: block;
+  width: 270px;
+  max-width: 100%;
+  height: auto;
+  border-radius: 12px;
+}
+
+/* 이 너비부터는 사진을 아래로 보내지 말고 숨김 */
+@media (max-width: 850px) {
+  .profile-container .image-content {
+    display: none;
+  }
 }
