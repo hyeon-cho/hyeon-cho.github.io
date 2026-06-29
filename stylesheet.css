@@ -460,3 +460,51 @@ table.bg_colour {
     transition: none;
   }
 }
+
+/* School */
+
+
+.education-item {
+  display: grid;
+  grid-template-columns: clamp(88px, 13vw, 130px) minmax(0, 1fr);
+  column-gap: 14px;
+  row-gap: 0;
+  align-items: start;
+}
+
+.education-logo {
+  justify-self: center;
+  align-self: center;
+  transform: translateY(-6px);
+}
+
+.education-logo img {
+  display: block;
+  width: 60px;
+  height: auto;
+}
+
+.education-info {
+  min-width: 0;
+}
+
+.education-details {
+  grid-column: 1 / -1;
+  padding-top: 4px;
+  line-height: 1.35;
+}
+
+@media screen and (max-width: 600px) {
+  .education-item {
+    grid-template-columns: 1fr;
+    row-gap: 0;
+  }
+
+  .education-logo {
+    display: none;
+  }
+
+  .education-details {
+    padding-top: 2px;
+  }
+}
