@@ -3,7 +3,7 @@ import ProfileLinks from './ProfileLinks.jsx'
 
 export default function Hero() {
   return (
-    <GlassPanel padding="26px 30px">
+    <GlassPanel className="hero">
       {/* Flex lives on this inner wrapper, not on the GlassPanel itself:
           samasante <Glass> injects its own DOM around `children`, so a
           layout applied to the panel element would not reach the columns. */}

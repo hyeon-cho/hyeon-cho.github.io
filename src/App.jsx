@@ -1,4 +1,5 @@
 import MeshBackground from './components/MeshBackground.jsx'
+import GlassFilters from './components/GlassFilters.jsx'
 import Hero from './components/Hero.jsx'
 import Section from './components/Section.jsx'
 import PublicationList from './components/PublicationList.jsx'
@@ -13,6 +14,7 @@ export default function App() {
   return (
     <>
       <MeshBackground />
+      <GlassFilters />
       <main className="page stack">
         <Hero />
 

@@ -59,7 +59,7 @@ function PubLink({ link }) {
 
 export default function PublicationCard({ pub }) {
   return (
-    <GlassPanel padding="22px 24px">
+    <GlassPanel className="pub-card" interactive>
       <div className="pub-meta">
         <span className="venue-badge">{pub.venue}</span>
         <span>{pub.location}</span>
