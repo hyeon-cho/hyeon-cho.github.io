@@ -1,0 +1,635 @@
+/* ============================================================
+   Hyunmin Cho — homepage
+   Base typography (ported from the original stylesheet.css)
+   + animated mesh background + liquid-glass panels
+   ============================================================ */
+
+:root {
+  --ink: #1b2440;
+  --ink-soft: #3a4658;
+  --muted: #5a6480;
+  --link: #17357a;
+  --link-hover: #8b1a1a;
+  --accent: #f09228;
+
+  --gold: #d4a017;
+  --gold-ink: #6d510b;
+
+  --page-max: 820px;
+  --panel-radius: 22px;
+
+  /* base tint that sits *behind* the mesh */
+  --page-bg: #eef3fb;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  background: var(--page-bg);
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  color: var(--ink);
+  font-family: 'Lato', Verdana, Helvetica, sans-serif;
+  font-size: 15px;
+  line-height: 1.55;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+a {
+  color: var(--link);
+  text-decoration: none;
+  transition: color 0.18s ease;
+}
+
+a:visited {
+  color: var(--link);
+}
+
+a:hover {
+  color: var(--link-hover);
+}
+
+a:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+  border-radius: 3px;
+}
+
+strong {
+  font-weight: 700;
+}
+
+/* ---------- Layout ---------- */
+.page {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  max-width: var(--page-max);
+  margin: 0 auto;
+  padding: 40px 22px 64px;
+}
+
+.stack > * + * {
+  margin-top: 22px;
+}
+
+hr.soft {
+  border: 0;
+  height: 1px;
+  margin: 26px 0;
+  background: linear-gradient(90deg, transparent, rgba(70, 100, 150, 0.22), transparent);
+}
+
+/* ============================================================
+   Animated mesh background
+   Provides the colour/contrast that makes the glass read.
+   Kept light so an academic page stays legible.
+   ============================================================ */
+.mesh-bg {
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  overflow: hidden;
+  background:
+    linear-gradient(160deg, #f6f9ff 0%, #eef3fb 46%, #f3f0ff 100%);
+  pointer-events: none;
+}
+
+.mesh-blob {
+  position: absolute;
+  width: 60vw;
+  height: 60vw;
+  border-radius: 50%;
+  filter: blur(70px);
+  opacity: 0.55;
+  will-change: transform;
+}
+
+.mesh-blob--1 {
+  top: -12%;
+  left: -8%;
+  background: radial-gradient(circle at 50% 50%, rgba(122, 162, 255, 0.85), transparent 68%);
+  animation: drift1 24s ease-in-out infinite alternate;
+}
+
+.mesh-blob--2 {
+  top: 4%;
+  right: -14%;
+  background: radial-gradient(circle at 50% 50%, rgba(255, 183, 123, 0.7), transparent 68%);
+  animation: drift2 30s ease-in-out infinite alternate;
+}
+
+.mesh-blob--3 {
+  bottom: -16%;
+  left: 6%;
+  background: radial-gradient(circle at 50% 50%, rgba(119, 218, 214, 0.72), transparent 68%);
+  animation: drift3 28s ease-in-out infinite alternate;
+}
+
+.mesh-blob--4 {
+  bottom: -8%;
+  right: 2%;
+  background: radial-gradient(circle at 50% 50%, rgba(183, 156, 255, 0.7), transparent 68%);
+  animation: drift4 34s ease-in-out infinite alternate;
+}
+
+@keyframes drift1 { from { transform: translate3d(0, 0, 0) scale(1); } to { transform: translate3d(6vw, 5vh, 0) scale(1.12); } }
+@keyframes drift2 { from { transform: translate3d(0, 0, 0) scale(1.05); } to { transform: translate3d(-7vw, 6vh, 0) scale(0.95); } }
+@keyframes drift3 { from { transform: translate3d(0, 0, 0) scale(1); } to { transform: translate3d(5vw, -6vh, 0) scale(1.15); } }
+@keyframes drift4 { from { transform: translate3d(0, 0, 0) scale(1.08); } to { transform: translate3d(-5vw, -4vh, 0) scale(0.96); } }
+
+/* ============================================================
+   Glass panels
+   --css : self-contained CSS glass (guaranteed cross-browser,
+           samples the real backdrop → perfect alignment,
+           text on top stays crisp). Also the JS fallback.
+   --js  : lighter chrome for panels wrapped by the samasante
+           <Glass> element, which supplies the refraction.
+   ============================================================ */
+.glass-panel {
+  position: relative;
+  border-radius: var(--panel-radius);
+}
+
+.glass-panel--css {
+  border: 1px solid transparent;
+  background:
+    linear-gradient(135deg, rgba(255, 255, 255, 0.60), rgba(255, 255, 255, 0.30)) padding-box,
+    linear-gradient(120deg, rgba(255, 255, 255, 0.95) 0%, rgba(255, 255, 255, 0.35) 30%,
+      rgba(139, 177, 230, 0.28) 70%, rgba(255, 255, 255, 0.85) 100%) border-box;
+  box-shadow:
+    0 1px 0 rgba(255, 255, 255, 0.85) inset,
+    0 -1px 0 rgba(72, 104, 151, 0.10) inset,
+    0 12px 34px rgba(38, 64, 110, 0.12),
+    0 3px 10px rgba(28, 51, 92, 0.05);
+  backdrop-filter: blur(22px) saturate(165%) contrast(105%);
+  -webkit-backdrop-filter: blur(22px) saturate(165%) contrast(105%);
+}
+
+.glass-panel--js {
+  border: 1px solid rgba(255, 255, 255, 0.55);
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.34), rgba(255, 255, 255, 0.16));
+  box-shadow:
+    0 1px 0 rgba(255, 255, 255, 0.8) inset,
+    0 12px 34px rgba(38, 64, 110, 0.12);
+}
+
+.glass-panel--interactive {
+  transition:
+    transform 0.26s cubic-bezier(0.2, 0.8, 0.2, 1),
+    box-shadow 0.26s cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+
+.glass-panel--interactive:hover {
+  transform: translateY(-3px);
+  box-shadow:
+    0 1px 0 rgba(255, 255, 255, 0.95) inset,
+    0 -1px 0 rgba(72, 104, 151, 0.12) inset,
+    0 20px 44px rgba(38, 64, 110, 0.18),
+    0 5px 14px rgba(28, 51, 92, 0.07);
+}
+
+/* ============================================================
+   Hero
+   ============================================================ */
+.hero {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px;
+  padding: 26px 30px;
+}
+
+.hero-text {
+  flex: 1 1 340px;
+  min-width: 0;
+  padding: 8px;
+}
+
+.hero-photo {
+  flex: 0 0 auto;
+  width: 34%;
+  min-width: 190px;
+  display: flex;
+  justify-content: center;
+  padding: 8px;
+}
+
+.hero-photo img {
+  width: 100%;
+  max-width: 230px;
+  border-radius: 18px;
+  box-shadow: 0 10px 30px rgba(38, 64, 110, 0.22);
+}
+
+.name {
+  display: block;
+  font-size: 33px;
+  font-weight: 900;
+  letter-spacing: -0.01em;
+  line-height: 1.1;
+  margin-bottom: 10px;
+}
+
+.hero-text p {
+  margin: 0 0 12px;
+}
+
+.contact-line {
+  color: var(--ink-soft);
+}
+
+/* profile links row */
+.profile-links {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 11px;
+  margin-top: 16px;
+}
+
+.profile-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  border-radius: 13px;
+  color: var(--muted);
+  text-decoration: none;
+  border: 1px solid rgba(255, 255, 255, 0.6);
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.55), rgba(255, 255, 255, 0.28));
+  box-shadow: 0 1px 0 rgba(255, 255, 255, 0.8) inset, 0 3px 10px rgba(38, 64, 110, 0.10);
+  backdrop-filter: blur(14px) saturate(150%);
+  -webkit-backdrop-filter: blur(14px) saturate(150%);
+  transition: transform 0.18s ease, color 0.18s ease, box-shadow 0.18s ease;
+}
+
+.profile-link:hover {
+  color: var(--link);
+  transform: translateY(-2px);
+}
+
+.profile-link i {
+  font-size: 1.4em;
+  line-height: 1;
+}
+
+/* ============================================================
+   Collapsible sections
+   ============================================================ */
+.section {
+  margin-top: 8px;
+}
+
+.section-header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  width: 100%;
+  margin: 6px 0 14px;
+  padding: 12px 18px;
+  border: none;
+  border-radius: 16px;
+  color: var(--ink);
+  font-family: inherit;
+  font-size: 21px;
+  font-weight: 700;
+  text-align: left;
+  cursor: pointer;
+}
+
+.section-header .chev {
+  margin-left: auto;
+  font-size: 15px;
+  color: var(--muted);
+  transition: transform 0.28s cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+
+.section-header[aria-expanded='false'] .chev {
+  transform: rotate(-90deg);
+}
+
+.section-body {
+  overflow: hidden;
+  transition: opacity 0.25s ease;
+}
+
+.section-body[hidden] {
+  display: none;
+}
+
+/* ============================================================
+   Publications
+   ============================================================ */
+.pub-list {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.pub-card {
+  padding: 22px 24px;
+}
+
+.pub-meta {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 6px;
+  color: var(--muted);
+  font-size: 13.5px;
+}
+
+.venue-badge {
+  display: inline-block;
+  padding: 3px 9px;
+  border: 1px solid rgba(255, 255, 255, 0.75);
+  border-radius: 999px;
+  color: var(--gold-ink);
+  background: linear-gradient(135deg, rgba(255, 252, 229, 0.85), rgba(255, 221, 124, 0.5));
+  box-shadow: 0 1px 0 rgba(255, 255, 255, 0.75) inset, 0 2px 5px rgba(116, 79, 0, 0.08);
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.03em;
+}
+
+.pub-title {
+  display: block;
+  margin-bottom: 6px;
+  color: #193b85;
+  font-size: 18px;
+  font-weight: 800;
+  line-height: 1.28;
+}
+
+a.pub-title:hover {
+  color: #0f2b68;
+  text-decoration: underline;
+  text-decoration-thickness: 2px;
+  text-underline-offset: 4px;
+}
+
+.pub-authors,
+.pub-venue {
+  color: var(--ink);
+  font-size: 12.5px;
+  font-weight: 500;
+  line-height: 1.55;
+}
+
+.pub-venue {
+  color: var(--muted);
+  font-style: italic;
+}
+
+.first-author {
+  font-weight: 900;
+  letter-spacing: 0.05em;
+  background: linear-gradient(180deg, #f0f0f0 0%, #6f6f6f 18%, #141414 42%, #000 65%, #5a5a5a 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-shadow: 0 3px 8px rgba(0, 0, 0, 0.28);
+}
+
+.author-note {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  margin-left: 8px;
+  padding: 2px 9px;
+  border: 1px solid rgba(255, 255, 255, 0.62);
+  border-radius: 999px;
+  color: #a74c4c;
+  background: linear-gradient(135deg, rgba(255, 249, 250, 0.7), rgba(255, 220, 225, 0.36));
+  font-size: 11.5px;
+  font-weight: 650;
+  white-space: nowrap;
+}
+
+.pub-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 7px;
+  margin: 12px 0 10px;
+}
+
+.pub-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  padding: 5px 11px;
+  border: 1px solid rgba(255, 255, 255, 0.7);
+  border-radius: 8px;
+  color: #193b85;
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.55), rgba(232, 242, 255, 0.16));
+  box-shadow: 0 1px 0 rgba(255, 255, 255, 0.8) inset, 0 2px 7px rgba(25, 59, 133, 0.07);
+  font-size: 13.5px;
+  font-weight: 650;
+  line-height: 1;
+  text-decoration: none;
+  transition: transform 0.18s ease, background 0.18s ease, box-shadow 0.18s ease;
+}
+
+.pub-link:hover {
+  color: #193b85;
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.82), rgba(206, 226, 255, 0.3));
+  box-shadow: 0 1px 0 rgba(255, 255, 255, 0.95) inset, 0 6px 14px rgba(25, 59, 133, 0.14);
+  transform: translateY(-2px);
+}
+
+.pub-link small {
+  color: #7a8495;
+  font-size: 11px;
+  font-weight: 500;
+}
+
+.pub-link.disabled {
+  color: #788295;
+  cursor: default;
+  box-shadow: none;
+}
+
+.pub-link.disabled:hover {
+  transform: none;
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.5), rgba(232, 242, 255, 0.12));
+  box-shadow: none;
+}
+
+.pub-summary {
+  margin: 16px 0 0;
+  padding: 10px 15px;
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  border-radius: 14px;
+  color: var(--ink-soft);
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.34), rgba(225, 238, 255, 0.12));
+  box-shadow: 0 1px 0 rgba(255, 255, 255, 0.6) inset;
+  font-size: 13px;
+  line-height: 1.6;
+}
+
+/* ============================================================
+   Education / Awards / Project / Patents
+   ============================================================ */
+.panel-body {
+  padding: 20px 24px;
+  border-radius: 18px;
+  background: rgba(255, 255, 255, 0.72);
+  border: 1px solid rgba(255, 255, 255, 0.6);
+  box-shadow: 0 6px 20px rgba(38, 64, 110, 0.08);
+}
+
+.education-item {
+  display: grid;
+  grid-template-columns: clamp(84px, 13vw, 120px) minmax(0, 1fr);
+  column-gap: 16px;
+  align-items: center;
+}
+
+.education-item + .education-item {
+  margin-top: 20px;
+  padding-top: 20px;
+  border-top: 1px solid rgba(70, 100, 150, 0.14);
+}
+
+.education-logo {
+  justify-self: center;
+}
+
+.education-logo img {
+  display: block;
+  width: 58px;
+  height: auto;
+}
+
+.education-info .degree {
+  font-size: 16px;
+  font-weight: 700;
+}
+
+.education-info .place {
+  font-size: 16px;
+  color: var(--muted);
+}
+
+.education-info .dates {
+  font-size: 14px;
+  color: var(--muted);
+}
+
+.education-details {
+  grid-column: 1 / -1;
+  padding-top: 8px;
+  font-size: 14px;
+  line-height: 1.4;
+}
+
+.plain-list {
+  margin: 0;
+  padding-left: 20px;
+}
+
+.plain-list li + li {
+  margin-top: 10px;
+}
+
+.gold-prize {
+  color: var(--gold);
+  font-weight: 900;
+  letter-spacing: 0.06em;
+  text-shadow: 0 1px 0 #fff3b0, 0 2px 6px rgba(128, 86, 0, 0.32);
+}
+
+.certificate-link {
+  margin-left: 8px;
+  border-bottom: 1px solid currentColor;
+  color: #8a6500;
+  font-size: 0.9em;
+  font-weight: 600;
+}
+
+.certificate-link:hover {
+  color: #c89211;
+}
+
+.patent-meta {
+  color: var(--muted);
+  font-size: 13px;
+}
+
+/* ============================================================
+   Footer
+   ============================================================ */
+.site-footer {
+  margin-top: 26px;
+  text-align: right;
+  font-size: 12.5px;
+  color: var(--muted);
+}
+
+/* ============================================================
+   Responsive
+   ============================================================ */
+@media (max-width: 720px) {
+  .hero {
+    padding: 22px;
+  }
+
+  .hero-photo {
+    order: -1;
+    width: 100%;
+  }
+
+  .hero-photo img {
+    max-width: 190px;
+  }
+
+  .section-header {
+    font-size: 19px;
+  }
+
+  .pub-title {
+    font-size: 19px;
+  }
+
+  .education-item {
+    grid-template-columns: 1fr;
+    row-gap: 4px;
+  }
+
+  .education-logo {
+    display: none;
+  }
+}
+
+/* ============================================================
+   Reduced motion — freeze the mesh and drop transitions
+   ============================================================ */
+@media (prefers-reduced-motion: reduce) {
+  .mesh-blob {
+    animation: none !important;
+  }
+
+  .glass-panel--interactive,
+  .profile-link,
+  .pub-link,
+  .section-header .chev {
+    transition: none !important;
+  }
+}
+
+/* Fallback where backdrop-filter is unsupported */
+@supports not ((backdrop-filter: blur(1px)) or (-webkit-backdrop-filter: blur(1px))) {
+  .glass-panel--css {
+    background: rgba(250, 253, 255, 0.94);
+  }
+}
