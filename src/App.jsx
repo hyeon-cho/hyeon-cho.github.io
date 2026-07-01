@@ -24,7 +24,7 @@ export default function App() {
           <PublicationList items={coAuthoredPubs} />
         </Section>
 
-        <Section icon="🎓" title="Education">
+        <Section icon="🎓" title="Education" plain>
           <Education />
         </Section>
 
