@@ -200,11 +200,14 @@ hr.soft {
    Hero
    ============================================================ */
 .hero {
+  padding: 26px 30px;
+}
+
+.hero-inner {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
   gap: 8px;
-  padding: 26px 30px;
 }
 
 .hero-text {
@@ -251,6 +254,7 @@ hr.soft {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
+  justify-content: center;
   gap: 11px;
   margin-top: 16px;
 }
