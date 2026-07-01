@@ -330,6 +330,14 @@ hr.soft {
   display: none;
 }
 
+.section-header--plain {
+  cursor: pointer;
+}
+
+.section-header--plain:hover {
+  color: var(--link);
+}
+
 /* ============================================================
    Publications
    ============================================================ */
@@ -490,6 +498,11 @@ a.pub-title:hover {
   background: rgba(255, 255, 255, 0.72);
   border: 1px solid rgba(255, 255, 255, 0.6);
   box-shadow: 0 6px 20px rgba(38, 64, 110, 0.08);
+}
+
+/* No card / no glass — content sits directly on the mesh (Awards, Project, Patents) */
+.bare-body {
+  padding: 6px 18px 10px;
 }
 
 .education-item {

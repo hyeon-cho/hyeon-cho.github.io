@@ -1,6 +1,6 @@
 export default function Patents() {
   return (
-    <div className="panel-body">
+    <div className="bare-body">
       <ul className="plain-list">
         <li>
           Method and Apparatus for Lossless Implicit Neural Representation Based on Bipolar Vector Labeling

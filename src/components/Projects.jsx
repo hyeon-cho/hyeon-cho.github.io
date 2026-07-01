@@ -1,6 +1,6 @@
 export default function Projects() {
   return (
-    <div className="panel-body">
+    <div className="bare-body">
       <ul className="plain-list">
         <li>
           <strong>Samsung Research (Next Generation Display Lab)</strong>, Development of user-preferred

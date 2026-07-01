@@ -1,6 +1,6 @@
 export default function Awards() {
   return (
-    <div className="panel-body">
+    <div className="bare-body">
       <ul className="plain-list">
         <li>
           <strong>

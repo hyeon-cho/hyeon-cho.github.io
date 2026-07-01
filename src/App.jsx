@@ -28,15 +28,15 @@ export default function App() {
           <Education />
         </Section>
 
-        <Section icon="🏆" title="Awards">
+        <Section icon="🏆" title="Awards" plain>
           <Awards />
         </Section>
 
-        <Section icon="🛠️" title="Project">
+        <Section icon="🛠️" title="Project" plain>
           <Projects />
         </Section>
 
-        <Section icon="📜" title="Patents">
+        <Section icon="📜" title="Patents" plain>
           <Patents />
         </Section>
 
