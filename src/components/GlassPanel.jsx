@@ -17,7 +17,10 @@ import ErrorBoundary from './ErrorBoundary.jsx'
  * To disable the JS layer entirely (pure CSS-glass-over-mesh — still a full
  * liquid-glass look), set USE_JS_REFRACTION = false.
  */
-const USE_JS_REFRACTION = true
+// Off: we use CSS + SVG-displacement liquid glass (see base.css / GlassFilters)
+// instead of the JS engine — stronger refraction in Chromium, and no
+// dependency on the (subtle, hard-to-verify) samasante runtime.
+const USE_JS_REFRACTION = false
 
 const LazyGlass = USE_JS_REFRACTION
   ? lazy(() =>

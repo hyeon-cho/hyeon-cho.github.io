@@ -145,6 +145,13 @@ hr.soft {
    --js  : lighter chrome for panels wrapped by the samasante
            <Glass> element, which supplies the refraction.
    ============================================================ */
+.glass-defs {
+  position: absolute;
+  width: 0;
+  height: 0;
+  overflow: hidden;
+}
+
 .glass-panel {
   position: relative;
   border-radius: var(--panel-radius);
@@ -163,6 +170,16 @@ hr.soft {
     0 3px 10px rgba(28, 51, 92, 0.05);
   backdrop-filter: blur(22px) saturate(165%) contrast(105%);
   -webkit-backdrop-filter: blur(22px) saturate(165%) contrast(105%);
+}
+
+/* Real liquid refraction (Chromium) on the large panels only — hero + cards.
+   Small header pills keep plain frost. Safari/Firefox treat url() as invalid
+   inside backdrop-filter, so they fall back to the blur line above it. */
+.hero,
+.pub-card {
+  -webkit-backdrop-filter: blur(20px) saturate(165%) contrast(105%);
+  backdrop-filter: blur(20px) saturate(165%) contrast(105%);
+  backdrop-filter: url(#liquid-glass) blur(3px) saturate(175%) contrast(106%);
 }
 
 .glass-panel--js {
