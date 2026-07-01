@@ -18,11 +18,11 @@ export default function App() {
       <main className="page stack">
         <Hero />
 
-        <Section icon="✦" title="First-Author Publications">
+        <Section icon="✦" title="First-Author Publications" plain>
           <PublicationList items={firstAuthorPubs} />
         </Section>
 
-        <Section icon="✧" title="Co-Authored Publications">
+        <Section icon="✧" title="Co-Authored Publications" plain>
           <PublicationList items={coAuthoredPubs} />
         </Section>
 
