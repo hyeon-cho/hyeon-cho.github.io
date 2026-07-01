@@ -8,7 +8,6 @@ export default function MeshBackground() {
   return (
     <div className="mesh-bg" aria-hidden="true">
       <span className="mesh-blob mesh-blob--1" />
-      <span className="mesh-blob mesh-blob--2" />
       <span className="mesh-blob mesh-blob--3" />
       <span className="mesh-blob mesh-blob--4" />
     </div>
