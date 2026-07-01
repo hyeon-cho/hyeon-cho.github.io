@@ -1,64 +1,36 @@
-import { lazy, Suspense } from 'react'
+import LiquidGlass from 'liquid-glass-react'
 import ErrorBoundary from './ErrorBoundary.jsx'
 
 /**
- * Liquid-glass surface for publication cards and the hero panel.
+ * Liquid-glass surface (rdev/liquid-glass-react) for the hero + publication
+ * cards. Real refraction + chromatic aberration in Chrome/Edge; Safari and
+ * Firefox show frost only (documented library limitation).
  *
- * Two-layer, fail-safe design (this build host has no browser to verify the
- * refraction, so the site must look right even if the engine misbehaves):
+ * Wrapped in an ErrorBoundary that degrades to a plain CSS-glass card if the
+ * library ever throws (this build host has no browser to verify it).
  *
- *   1. CSS glass base (`.glass-panel--css`) — guaranteed cross-browser,
- *      samples the real mesh behind the element (perfect alignment), text
- *      stays crisp. Shown while the engine loads and if it ever fails.
- *   2. samasante <Glass> — true SVG-displacement refraction of the backdrop,
- *      children crisp on top. Loaded LAZILY so a bad/missing export degrades
- *      to the CSS layer at runtime instead of breaking the whole bundle.
- *
- * To disable the JS layer entirely (pure CSS-glass-over-mesh — still a full
- * liquid-glass look), set USE_JS_REFRACTION = false.
+ * Tunables (rdev props): displacementScale, blurAmount, saturation,
+ * aberrationIntensity, elasticity, cornerRadius. Left mostly at library
+ * defaults on purpose.
  */
-// Off: we use CSS + SVG-displacement liquid glass (see base.css / GlassFilters)
-// instead of the JS engine — stronger refraction in Chromium, and no
-// dependency on the (subtle, hard-to-verify) samasante runtime.
-const USE_JS_REFRACTION = false
-
-const LazyGlass = USE_JS_REFRACTION
-  ? lazy(() =>
-      import('@samasante/liquid-glass').then((m) => ({ default: m.Glass })),
-    )
-  : null
-
-export default function GlassPanel({
-  as: Tag = 'div',
-  className = '',
-  interactive = false,
-  optics,
-  children,
-  ...rest
-}) {
-  const interactiveCls = interactive ? ' glass-panel--interactive' : ''
-  const cssClass = `glass-panel glass-panel--css${interactiveCls} ${className}`.trim()
-
+export default function GlassPanel({ className = '', cornerRadius = 22, padding = '22px 24px', children }) {
   const fallback = (
-    <Tag className={cssClass} {...rest}>
+    <div className={`glass-panel glass-panel--css ${className}`.trim()} style={{ padding }}>
       {children}
-    </Tag>
+    </div>
   )
-
-  if (!LazyGlass) return fallback
 
   return (
     <ErrorBoundary fallback={fallback}>
-      <Suspense fallback={fallback}>
-        <LazyGlass
-          as={Tag}
-          className={`glass-panel glass-panel--js${interactiveCls} ${className}`.trim()}
-          optics={{ frost: 6, dispersion: 0.35, bend: 0.5, ...optics }}
-          {...rest}
-        >
-          {children}
-        </LazyGlass>
-      </Suspense>
+      <LiquidGlass
+        cornerRadius={cornerRadius}
+        padding={padding}
+        elasticity={0.1}
+        className={`glass-liquid ${className}`.trim()}
+        style={{ width: '100%' }}
+      >
+        {children}
+      </LiquidGlass>
     </ErrorBoundary>
   )
 }
