@@ -1,898 +1,205 @@
-<!DOCTYPE HTML> 
+<!doctype html>
 <html lang="en">
-
 <head>
-
-  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-
-  <title>Hyunmin Cho</title>
-
-  <link rel="stylesheet" type="text/css" href="stylesheet.css">
-  <link href="css/bootstrap.min.css" rel="stylesheet" media="screen">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
-
-  <meta name="author" content="Hyunmin Cho">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-
-  <link rel="stylesheet" type="text/css" href="stylesheet.css">
-  <link rel="icon" type="image/png" href="images/star.png">
-  <style>
-    .container {
-      display: flex;
-      flex-wrap: wrap;
-      width: 100%;
-      border: 0px;
-      border-spacing: 0px;
-      border-collapse: separate;
-      margin-right: auto;
-      margin-left: auto;
-      align-items: center;
-      /* Center-aligns items vertically in desktop mode */
-    }
-
-    .text-content {
-      padding: 2.5%;
-      width: 63%;
-      vertical-align: middle;
-      order: 1;
-    }
-
-    .image-content {
-      padding: 2.5%;
-      width: 37%;
-      max-width: 37%;
-      order: 2;
-      display: flex;
-      justify-content: center;
-      /* Center-aligns image horizontally */
-    }
-
-    .image-content img {
-      width: 100%;
-      max-width: 80%;
-    }
-
-    .highlight {
-      background: #fff4cc;   /* 사진 같은 연한 노랑 */
-      padding: 0.05em 0.12em;
-      box-decoration-break: clone;
-      -webkit-box-decoration-break: clone;
-    }
-
-    @media screen and (max-width: 768px) {
-
-      .text-content,
-      .image-content {
-        width: 100%;
-        max-width: 100%;
-        order: 1;
-      }
-
-      .image-content {
-        order: 2;
-        display: flex;
-        justify-content: center;
-        /* Center-aligns image horizontally in mobile mode */
-      }
-
-      .image-content img {
-        width: auto;
-        max-width: 100%;
-        height: auto;
-        max-height: 0px;
-        /* Adjust this value as needed */
-      }
-    }
-  </style>
+ <meta charset="utf-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1">
+ <meta name="color-scheme" content="light">
+ <title>Hyunmin Cho — Generative Models &amp; Visual Representations</title>
+ <meta name="author" content="Hyunmin Cho">
+ <meta name="description" content="Hyunmin Cho is a 1st-year Ph.D. student in the Integrated M.S.–Ph.D. program at Korea University, exploring visual intelligence with a focus on representation and generation.">
+ <link rel="canonical" href="https://hyeon-cho.github.io/">
+ <meta property="og:type" content="website">
+ <meta property="og:title" content="Hyunmin Cho — Generative Models &amp; Visual Representations">
+ <meta property="og:description" content="Research on generative models, controllable generation, and neural representations at Korea University.">
+ <meta property="og:url" content="https://hyeon-cho.github.io/">
+ <meta name="twitter:card" content="summary">
+ <link rel="icon" href="images/favicon.svg" type="image/svg+xml">
+ <link rel="icon" href="images/favicon.png" type="image/png" sizes="32x32">
+ <link rel="stylesheet" href="stylesheet.css">
+ <script src="js/homepage.js" defer></script>
 </head>
+<body>
+ <a class="skip-link" href="#main">Skip to content</a>
+ <header class="site-header">
+  <nav class="nav-shell glass" aria-label="Main navigation">
+   <a class="wordmark" href="#top">Hyunmin Cho<span class="wordmark-dot" aria-hidden="true">.</span></a>
+   <div class="nav-links">
+    <a href="#research">Research</a>
+    <a href="#recent">Recent</a>
+    <a href="files/cv.pdf" target="_blank" rel="noopener noreferrer">CV<span class="external-arrow" aria-hidden="true"> ↗</span></a>
+   </div>
+  </nav>
+ </header>
+ <main id="main" class="page-shell" tabindex="-1">
+  <section class="intro" id="top" aria-labelledby="intro-title">
+   <div class="intro-copy">
+    <p class="eyebrow">1st-year Ph.D. student <span aria-hidden="true">/</span> Korea University</p>
+    <h1 id="intro-title">Hyunmin Cho</h1>
+    <p class="research-statement">I explore visual intelligence, with a current focus on representation and generation.</p>
+    <p class="intro-bio">I’m in the Integrated M.S.–Ph.D. program at <a href="https://www.korea.edu/sites/en/index.do">Korea University</a>, working in the <a href="https://ipa.korea.ac.kr/">Image Processing Algorithm Lab</a>, advised by <a href="https://scholar.google.com/citations?user=aLYNnyoAAAAJ&amp;hl=en">Kyong Hwan Jin</a>. My current work spans generative models, controllable generation, and neural representations.</p>
+    <div class="profile-links" aria-label="Contact and profiles">
+     <a href="mailto:hyun_cho@korea.ac.kr">Email<span aria-hidden="true"> ↗</span></a>
+     <a href="https://scholar.google.com/citations?user=MRz6g3QAAAAJ&amp;hl=ko" target="_blank" rel="noopener noreferrer">Scholar<span aria-hidden="true"> ↗</span></a>
+     <a href="https://github.com/hyeon-cho" target="_blank" rel="noopener noreferrer">GitHub<span aria-hidden="true"> ↗</span></a>
+     <a href="files/cv.pdf" target="_blank" rel="noopener noreferrer">CV<span aria-hidden="true"> ↗</span></a>
+    </div>
+   </div>
+   <div class="portrait-frame"><span class="portrait-crop"><img class="portrait" src="images/hyuncho.JPG" width="650" height="1002" alt="Hyunmin Cho" fetchpriority="high" decoding="async" draggable="false"></span></div>
+  </section>
 
-<body class="bg_colour">
-  <table <table border=0 class="bg_colour"
-    style="width:100%;max-width:800px;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
-    <tbody>
-      <tr style="padding:0px">
-        <td style="padding:0px">
-          <div class="container">
-            <div class="text-content">
-              <p style="text-align:left">
-                <name>Hyunmin Cho</name>
-              </p>
-<p>
-  I am a third-year Integrated M.S.-Ph.D. student, currently in my first Ph.D.-level year at
-  <a href="https://www.korea.edu/sites/en/index.do">Korea University</a>,
-  <a href="https://ipa.korea.ac.kr/">Image Processing Algorithm Lab.</a>,
-  advised by Prof.
-  <a href="https://scholar.google.com/citations?user=aLYNnyoAAAAJ&hl=en">Kyong Hwan Jin</a>.
-</p>
-
-<p>
-  My research interests include <strong>generative models</strong>,
-  <strong>controllable generation</strong>, and <strong>world models</strong>.
-  I aim to build generative systems that translate human intent into
-  flexible and modifiable digital reality.
-</p>
-
-<p>
-  Feel free to send me an e-mail if you would like to chat!<br>
-  <b>Contact</b>: hyun_cho@korea.ac.kr
-</p>
-
-              <style>
-  .profile-links {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 11px;
-    margin: 18px 0 0;
-  }
-
-  .profile-link {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    width: 43px;
-    height: 43px;
-    border: 1px solid #e1e5ee;
-    border-radius: 12px;
-    background: #f8f9fc;
-    color: #727785;
-    text-decoration: none;
-    box-shadow: 0 2px 6px rgba(25, 59, 133, 0.06);
-    transition: transform 0.18s ease, color 0.18s ease,
-                border-color 0.18s ease, box-shadow 0.18s ease;
-  }
-
-  .profile-link:hover {
-    color: #193b85;
-    border-color: #b9c8e8;
-    background: #f2f6ff;
-    transform: translateY(-2px);
-    box-shadow: 0 6px 14px rgba(25, 59, 133, 0.14);
-  }
-
-  .profile-link i {
-    font-size: 1.45em;
-    line-height: 1;
-  }
-</style>
-
-<div class="profile-links">
-  <a class="profile-link"
-     href="files/cv.pdf"
-     target="_blank"
-     rel="noopener noreferrer"
-     title="Curriculum Vitae"
-     aria-label="Curriculum Vitae">
-    <i class="ai ai-cv"></i>
-  </a>
-
-  <a class="profile-link"
-     href="mailto:hyun_cho@korea.ac.kr"
-     title="Email"
-     aria-label="Email">
-    <i class="fas fa-envelope"></i>
-  </a>
-
-  <a class="profile-link"
-     href="https://scholar.google.com/citations?user=MRz6g3QAAAAJ&hl=ko"
-     target="_blank"
-     rel="noopener noreferrer"
-     title="Google Scholar"
-     aria-label="Google Scholar">
-    <i class="ai ai-google-scholar"></i>
-  </a>
-
-  <a class="profile-link"
-     href="https://www.linkedin.com/in/chohyunmin/"
-     target="_blank"
-     rel="noopener noreferrer"
-     title="LinkedIn"
-     aria-label="LinkedIn">
-    <i class="fab fa-linkedin-in"></i>
-  </a>
-
-  <a class="profile-link"
-     href="https://github.com/hyeon-cho"
-     target="_blank"
-     rel="noopener noreferrer"
-     title="GitHub"
-     aria-label="GitHub">
-    <i class="fab fa-github"></i>
-  </a>
+  <section class="research-section" id="research" aria-labelledby="research-title">
+   <div class="section-heading">
+    <div><p class="eyebrow">Publications</p><h2 id="research-title">Research</h2></div>
+    <div class="research-filter glass" role="group" aria-label="Publication selection" hidden>
+     <span class="selection-lens" aria-hidden="true"></span>
+     <button type="button" data-filter="selected" aria-pressed="true" aria-controls="publication-list">Selected <span>4</span></button>
+     <button type="button" data-filter="all" aria-pressed="false" aria-controls="publication-list">All <span>6</span></button>
+    </div>
+   </div>
+   <p class="sr-only" id="research-status" role="status" aria-live="polite"></p>
+   <div id="publication-list">
+    <div id="content-research"><article class="paper" id="harmonic" data-selected="true">
+ <a class="paper-visual" href="https://hyeon-cho.github.io/Harmonic-line-Spectrum/" target="_blank" rel="noopener noreferrer" aria-label="View Recurrent Sinusoidal INRs for Efficient High-Fidelity Representation:
+      Harmonic-line Spectrum Perspective"><img src="images/research/harmonic-teaser.png" width="4024" height="2462" alt="Harmonic-line Spectrum teaser with reconstruction examples, recurrent INR architecture, frequency analyses, and benchmark results." loading="lazy" decoding="async"></a>
+ <div class="paper-copy">
+  <div class="paper-meta"><span class="venue">ECCV 2026</span><span class="paper-topic">Neural representations</span></div>
+  <h3><a href="https://hyeon-cho.github.io/Harmonic-line-Spectrum/" target="_blank" rel="noopener noreferrer">Recurrent Sinusoidal INRs for Efficient High-Fidelity Representation:
+      Harmonic-line Spectrum Perspective</a></h3>
+  <p class="paper-authors"><strong>Hyunmin Cho</strong>, <a href="https://sites.google.com/view/jaejunyoo">Jaejun Yoo</a>, and <a href="https://scholar.google.com/citations?user=aLYNnyoAAAAJ&amp;hl"> Kyong Hwan Jin<sup>†</sup> </a></p>
+  <p class="paper-takeaway">Expanding a neural representation’s frequency range by reusing one sinusoidal block—without adding parameters.</p>
+  <div class="paper-links" aria-label="Resources for Recurrent Sinusoidal INRs for Efficient High-Fidelity Representation:
+      Harmonic-line Spectrum Perspective"><a href="https://arxiv.org/pdf/2607.21485" target="_blank" rel="noopener noreferrer">Paper<span aria-hidden="true"> ↗</span></a>
+<a href="https://hyeon-cho.github.io/Harmonic-line-Spectrum/" target="_blank" rel="noopener noreferrer">Project<span aria-hidden="true"> ↗</span></a>
+<a href="https://github.com/hyeon-cho/Harmonic-Siren" target="_blank" rel="noopener noreferrer">Code<span aria-hidden="true"> ↗</span></a></div>
+ </div>
+</article>
+<article class="paper" id="balancing" data-selected="true">
+ <a class="paper-visual paper-pair" href="https://hyeon-cho.github.io/Balancing/" target="_blank" rel="noopener noreferrer" aria-label="View Balancing Fidelity and Diversity in Diffusion Models via Symmetric
+      Attention Decomposition: Hopfield Perspective"><figure><img src="images/research/balancing-base.webp" width="480" height="480" alt="Generated boats in a harbor: baseline." loading="lazy" decoding="async"><figcaption>Baseline</figcaption></figure><figure><img src="images/research/balancing-result.webp" width="480" height="480" alt="Generated boats in a harbor: skew perturbation." loading="lazy" decoding="async"><figcaption>Skew perturbation</figcaption></figure></a>
+ <div class="paper-copy">
+  <div class="paper-meta"><span class="venue">ICML 2026</span><span class="paper-topic">Diffusion · Associative memory</span></div>
+  <h3><a href="https://hyeon-cho.github.io/Balancing/" target="_blank" rel="noopener noreferrer">Balancing Fidelity and Diversity in Diffusion Models via Symmetric
+      Attention Decomposition: Hopfield Perspective</a></h3>
+  <p class="paper-authors"><strong>Hyunmin Cho</strong>, Woo Kyoung Han, and <a href="https://scholar.google.com/citations?user=aLYNnyoAAAAJ&amp;hl" rel="noopener noreferrer" target="_blank"> Kyong Hwan Jin<sup>†</sup> </a></p>
+  <p class="paper-takeaway">Decomposing attention into symmetric energy and skew-symmetric circulation to control image fidelity and diversity.</p>
+  <div class="paper-links" aria-label="Resources for Balancing Fidelity and Diversity in Diffusion Models via Symmetric
+      Attention Decomposition: Hopfield Perspective"><a href="https://openreview.net/pdf?id=E0MKfKmQkT" target="_blank" rel="noopener noreferrer">Paper<span aria-hidden="true"> ↗</span></a>
+<a href="https://hyeon-cho.github.io/Balancing/" target="_blank" rel="noopener noreferrer">Project<span aria-hidden="true"> ↗</span></a>
+<a href="https://github.com/hyeon-cho/Attention-Symmetric-Decomposition" target="_blank" rel="noopener noreferrer">Code<span aria-hidden="true"> ↗</span></a></div>
+ </div>
+</article>
+<article class="paper" id="tag" data-selected="true">
+ <a class="paper-visual paper-pair" href="https://hyeon-cho.github.io/TAG/" target="_blank" rel="noopener noreferrer" aria-label="View TAG: Tangential Amplifying Guidance for Hallucination-Resistant Sampling"><figure><img src="images/research/tag-base.webp" width="480" height="480" alt="SDXL generates a tennis player: baseline." loading="lazy" decoding="async"><figcaption>Baseline</figcaption></figure><figure><img src="images/research/tag-result.webp" width="480" height="480" alt="SDXL generates a tennis player: with tag." loading="lazy" decoding="async"><figcaption>With TAG</figcaption></figure></a>
+ <div class="paper-copy">
+  <div class="paper-meta"><span class="venue">ICML 2026</span><span class="paper-topic">Diffusion · Controllable generation</span></div>
+  <h3><a href="https://hyeon-cho.github.io/TAG/" target="_blank" rel="noopener noreferrer">TAG: Tangential Amplifying Guidance for Hallucination-Resistant Sampling</a></h3>
+  <p class="paper-authors"><strong>Hyunmin Cho</strong><strong><sup>*</sup></strong>, <a href="https://sunovivid.github.io/" rel="noopener noreferrer" target="_blank"> Donghoon Ahn<sup>*</sup> </a>, <a href="https://susunghong.github.io/" rel="noopener noreferrer" target="_blank"> Susung Hong<sup>*</sup> </a>, Jee Eun Kim, <a href="https://cvlab.kaist.ac.kr/" rel="noopener noreferrer" target="_blank"> Seungryong Kim<sup>†</sup> </a>, and <a href="https://scholar.google.com/citations?user=aLYNnyoAAAAJ&amp;hl" rel="noopener noreferrer" target="_blank"> Kyong Hwan Jin<sup>†</sup> </a></p>
+  <p class="paper-takeaway">Amplifying tangential sampler updates to reduce hallucinations, without retraining or extra denoiser evaluations.</p>
+  <div class="paper-links" aria-label="Resources for TAG: Tangential Amplifying Guidance for Hallucination-Resistant Sampling"><a href="https://openreview.net/pdf?id=1XJqPy2LhA" target="_blank" rel="noopener noreferrer">Paper<span aria-hidden="true"> ↗</span></a>
+<a href="https://hyeon-cho.github.io/TAG/" target="_blank" rel="noopener noreferrer">Project<span aria-hidden="true"> ↗</span></a>
+<a href="https://github.com/hyeon-cho/Tangential-Amplifying-Guidance" target="_blank" rel="noopener noreferrer">Code<span aria-hidden="true"> ↗</span></a></div>
+ </div>
+</article>
+<article class="paper" id="irag" data-selected="true">
+ <a class="paper-visual" href="https://byeonghunlee12.github.io/iRAG_page/" target="_blank" rel="noopener noreferrer" aria-label="View Reference-based Super-Resolution via Image-based Retrieval-Augmented
+  Generation Diffusion"><img src="images/research/irag.webp" width="960" height="600" alt="Qualitative super-resolution results compare iRAG with other methods and ground truth." loading="lazy" decoding="async"></a>
+ <div class="paper-copy">
+  <div class="paper-meta"><span class="venue">ICCV 2025</span><span class="paper-topic">Retrieval-augmented generation</span></div>
+  <h3><a href="https://byeonghunlee12.github.io/iRAG_page/" target="_blank" rel="noopener noreferrer">Reference-based Super-Resolution via Image-based Retrieval-Augmented
+  Generation Diffusion</a></h3>
+  <p class="paper-authors"><a href="https://scholar.google.com/citations?user=0VhcJXwAAAAJ&amp;hl=ko" rel="noopener noreferrer" target="_blank"> Byeonghun Lee<sup>*</sup> </a>, <strong>Hyunmin Cho</strong><strong><sup>*</sup></strong>, Hong Gyu Choi, Soo Min Kang, Iljun Ahn, and <a href="https://scholar.google.com/citations?user=aLYNnyoAAAAJ&amp;hl" rel="noopener noreferrer" target="_blank"> Kyong Hwan Jin<sup>†</sup> </a></p>
+  <p class="paper-takeaway">Retrieving visual references to guide diffusion toward realistic, detail-preserving super-resolution.</p>
+  <p class="paper-collaboration">In collaboration with Samsung Research.</p>
+  <div class="paper-links" aria-label="Resources for Reference-based Super-Resolution via Image-based Retrieval-Augmented
+  Generation Diffusion"><a href="https://openaccess.thecvf.com/content/ICCV2025/papers/Lee_Reference-based_Super-Resolution_via_Image-based_Retrieval-Augmented_Generation_Diffusion_ICCV_2025_paper.pdf" target="_blank" rel="noopener noreferrer">Paper<span aria-hidden="true"> ↗</span></a>
+<a href="https://byeonghunlee12.github.io/iRAG_page/" target="_blank" rel="noopener noreferrer">Project<span aria-hidden="true"> ↗</span></a>
+<a href="https://github.com/ByeonghunLee12/iRAG" target="_blank" rel="noopener noreferrer">Code<span aria-hidden="true"> ↗</span></a></div>
+ </div>
+</article>
 </div>
-            </div>
-            <div class="image-content">
-              <!-- <div class="container profile-container"> -->
-                    <a href="images/hyuncho.JPG"><img alt="profile photo" src="images/hyuncho.JPG" class="hoverZoomLink"></a>
-              <!-- </div> -->
-            </div>
-          </div>
-          <hr class="soft">
-
-          <button style="border:0px transparent; background-color: transparent;outline:none;" type="button"
-            class="collapsible" data-toggle="collapse" data-target="#content-research" id="research">
-            <heading>✦ First-Author Publications</heading>
-          </button>
-          <div id="content-research" class="collapse in">
-            <table class="publication-list"
-  style="width:100%; border:0; border-collapse:separate; margin-right:auto; margin-left:auto;">
-              <tbody>
-<!-- Paper 1 -->
-<tr class="publication-row">
-  <!-- <td class="publication-visual">
-    <a href="https://hyeon-cho.github.io/Harmonic-line-Spectrum/"
-       target="_blank"
-       rel="noopener noreferrer"
-       aria-label="Open project website">
-      <div class="publication-thumb">
-        <img
-          src="images/eccv26_12459.png"
-          alt="Overview figure for Recurrent Sinusoidal INRs"
-        >
-      </div>
-    </a>
-  </td> -->
-
-  <td class="publication-content">
-    <div class="publication-meta">
-      <span class="venue-badge">ECCV 2026</span>
-      <span> Malmö, Sweden 🇸🇪</span>
+<div id="content-research-co"><article class="paper" id="real" data-selected="false">
+ <a class="paper-visual" href="papers/5ReAL_7mb.pdf" target="_blank" rel="noopener noreferrer" aria-label="View ReAL: Reference-to-Image (R2I)-Aware Latent Diffusion for Image
+  Super-Resolution"><img src="images/research/real.webp" width="960" height="600" alt="Reference-aware diffusion compares visual reference guidance with text-conditioned restoration." loading="lazy" decoding="async"></a>
+ <div class="paper-copy">
+  <div class="paper-meta"><span class="venue">ECCV 2026</span><span class="paper-topic">Image super-resolution</span></div>
+  <h3><a href="papers/5ReAL_7mb.pdf" target="_blank" rel="noopener noreferrer">ReAL: Reference-to-Image (R2I)-Aware Latent Diffusion for Image
+  Super-Resolution</a></h3>
+  <p class="paper-authors"><a href="https://scholar.google.com/citations?user=0VhcJXwAAAAJ&amp;hl=ko" rel="noopener noreferrer" target="_blank"> Byeonghun Lee </a>, <strong>Hyunmin Cho</strong>, Sunghoon Im<sup>†</sup>, and <a href="https://scholar.google.com/citations?user=aLYNnyoAAAAJ&amp;hl" rel="noopener noreferrer" target="_blank"> Kyong Hwan Jin<sup>†</sup> </a></p>
+  <p class="paper-takeaway">Recovering image structure and texture with reference features cached and reused throughout denoising.</p>
+  <div class="paper-links" aria-label="Resources for ReAL: Reference-to-Image (R2I)-Aware Latent Diffusion for Image
+  Super-Resolution"><a href="papers/5ReAL_7mb.pdf" target="_blank" rel="noopener noreferrer">Paper<span aria-hidden="true"> ↗</span></a><span class="resource-note">Project &amp; code forthcoming</span></div>
+ </div>
+</article>
+<article class="paper" id="lossless-inr" data-selected="false">
+ <a class="paper-visual" href="https://wookyounghan.github.io/LosslessINR/" target="_blank" rel="noopener noreferrer" aria-label="View Towards Lossless Implicit Neural Representation via Bit Plane
+  Decomposition"><img src="images/research/lossless.webp" width="960" height="600" alt="Bit-plane decomposition enables exact reconstruction of a digital image." loading="lazy" decoding="async"></a>
+ <div class="paper-copy">
+  <div class="paper-meta"><span class="venue">CVPR 2025</span><span class="paper-topic">Neural representations</span></div>
+  <h3><a href="https://wookyounghan.github.io/LosslessINR/" target="_blank" rel="noopener noreferrer">Towards Lossless Implicit Neural Representation via Bit Plane
+  Decomposition</a></h3>
+  <p class="paper-authors"><a href="https://scholar.google.com/citations?user=kieVQZwAAAAJ&amp;hl=en" rel="noopener noreferrer" target="_blank"> Woo Kyoung Han </a>, <a href="https://scholar.google.com/citations?user=0VhcJXwAAAAJ&amp;hl=ko" rel="noopener noreferrer" target="_blank"> Byeonghun Lee </a>, <strong>Hyunmin Cho</strong>, Sunghoon Im<sup>†</sup>, and <a href="https://scholar.google.com/citations?user=aLYNnyoAAAAJ&amp;hl" rel="noopener noreferrer" target="_blank"> Kyong Hwan Jin<sup>†</sup> </a></p>
+  <p class="paper-takeaway">Reconstructing digital signals exactly by learning their individual bit planes.</p>
+  <div class="paper-links" aria-label="Resources for Towards Lossless Implicit Neural Representation via Bit Plane
+  Decomposition"><a href="https://wookyounghan.github.io/LosslessINR/" target="_blank" rel="noopener noreferrer">Project<span aria-hidden="true"> ↗</span></a></div>
+ </div>
+</article>
     </div>
+   </div>
+   <div class="research-bottom"><p>* Equal contribution <span aria-hidden="true">·</span> † Corresponding author</p><button class="text-button" type="button" data-show-all hidden>View all 6 publications <span aria-hidden="true">→</span></button></div>
+  </section>
 
-    <a
-      class="publication-title"
-      href="https://hyeon-cho.github.io/Harmonic-line-Spectrum/"
-      target="_blank"
-      rel="noopener noreferrer"
-    >
-      Recurrent Sinusoidal INRs for Efficient High-Fidelity Representation:
-      Harmonic-line Spectrum Perspective
-    </a>
-
-    <div class="publication-authors">
-      <span class="first-author"><strong>Hyunmin Cho</strong></span>,
-      <a href="https://sites.google.com/view/jaejunyoo">Jaejun Yoo</a>,
-      and
-      <a href="https://scholar.google.com/citations?user=aLYNnyoAAAAJ&hl">
-        Kyong Hwan Jin<sup>†</sup>
-      </a>
+  <section class="experience-section" id="work-experience" aria-labelledby="experience-title">
+   <h2 id="experience-title">Work Experience</h2>
+   <div class="experience-entry">
+    <div class="experience-company">
+     <h3><a href="https://www.omron.com/sinicx/en/about/" target="_blank" rel="noopener noreferrer">OMRON SINIC X Corporation<span aria-hidden="true"> ↗</span></a></h3>
+     <p class="company-japanese" lang="ja">オムロン サイニックエックス株式会社</p>
+     <p class="experience-role">Research Intern <span class="experience-type">· Full-time</span> <span class="experience-type">· On-site</span></p>
+     <p class="experience-location">Hongo, Bunkyo-ku, Tokyo<br><span lang="ja">東京都文京区本郷</span></p>
     </div>
-
-    <div class="publication-venue">
-      <em>19th European Conference on Computer Vision</em>
+    <div class="experience-timing">
+     <p class="experience-status">Upcoming</p>
+     <p class="experience-dates"><span class="date-qualifier">Approx.</span> <time datetime="2026-11">Nov 2026</time>–<time datetime="2027-02">Feb 2027</time></p>
     </div>
-
-    <div class="publication-links">
-      <a class="pub-link" href="https://arxiv.org/pdf/2607.21485" aria-disabled="false">
-        <span>📄</span> Paper 
-        <!-- <small>coming soon</small> -->
-      </a>
-
-      <a class="pub-link" href="https://hyeon-cho.github.io/Harmonic-line-Spectrum/">
-        <span>↗</span> Website
-      </a>
-
-      <a class="pub-link" href="https://github.com/hyeon-cho/Harmonic-Siren">
-        <span>⌘</span> Code
-      </a>
-    </div>
-
-    <p class="publication-summary">
-      Reusing one sinusoidal block recurrently expands spectral support without
-      extra parameters: by <strong>Jacobi–Anger</strong>, each sine step creates
-      new frequency combinations.
-    </p>
-  </td>
-</tr>
-<!-- Paper 2 -->
-<tr class="publication-row">
-  <!-- <td class="publication-visual">
-    <a href="https://hyeon-cho.github.io/Balancing/"
-       target="_blank"
-       rel="noopener noreferrer"
-       aria-label="Open project website">
-      <div class="publication-thumb">
-        <img
-          src="images/icml26_18925.png"
-          alt="Overview figure for Balancing Fidelity and Diversity in Diffusion Models"
-        >
-      </div>
-    </a>
-  </td> -->
-
-  <td class="publication-content">
-    <div class="publication-meta">
-      <span class="venue-badge">ICML 2026</span>
-      <span> Seoul, South Korea 🇰🇷</span>
-    </div>
-
-    <a
-      class="publication-title"
-      href="https://hyeon-cho.github.io/Balancing/"
-      target="_blank"
-      rel="noopener noreferrer"
-    >
-      Balancing Fidelity and Diversity in Diffusion Models via Symmetric
-      Attention Decomposition: Hopfield Perspective
-    </a>
-
-    <div class="publication-authors">
-      <span class="first-author"><strong>Hyunmin Cho</strong></span>,
-      Woo Kyoung Han, and
-      <a
-        href="https://scholar.google.com/citations?user=aLYNnyoAAAAJ&hl"
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-        Kyong Hwan Jin<sup>†</sup>
-      </a>
-    </div>
-
-    <div class="publication-venue">
-      <em>43rd International Conference on Machine Learning</em>
-    </div>
-
-    <div class="publication-links">
-      <a
-        class="pub-link"
-        href="https://openreview.net/pdf?id=E0MKfKmQkT"
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-        <span>📄</span> Paper
-      </a>
-
-      <a
-        class="pub-link"
-        href="https://hyeon-cho.github.io/Balancing/"
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-        <span>↗</span> Website
-      </a>
-
-      <a
-        class="pub-link"
-        href="https://github.com/hyeon-cho/Attention-Symmetric-Decomposition"
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-        <span>⌘</span> Code
-      </a>
-    </div>
-
-    <p class="publication-summary">
-      We characterize the pre-softmax attention matrix <strong>QK</strong> in
-      transformers as an associative memory matrix encoding pairwise
-      associations between input features.
-    </p>
-  </td>
-</tr>
-<!-- Paper 3 -->
-<tr class="publication-row">
-  <!-- <td class="publication-visual">
-    <a href="https://hyeon-cho.github.io/TAG/"
-       target="_blank"
-       rel="noopener noreferrer"
-       aria-label="Open TAG project website">
-      <div class="publication-thumb">
-        <img
-          class="publication-image-small"
-          src="images/icml26_18956.png"
-          alt="Overview figure for TAG: Tangential Amplifying Guidance"
-        >
-      </div>
-    </a>
-  </td> -->
-
-  <td class="publication-content">
-    <div class="publication-meta">
-      <span class="venue-badge">ICML 2026</span>
-      <span> Seoul, South Korea 🇰🇷</span>
-    </div>
-
-<a
-  class="publication-title"
-  href="https://hyeon-cho.github.io/TAG/"
-  target="_blank"
-  rel="noopener noreferrer"
->
-  TAG: Tangential Amplifying Guidance for Hallucination-Resistant Sampling
-</a>
-
-<div class="publication-authors">
-  <span class="first-author"><strong>Hyunmin Cho</strong></span><strong><sup>*</sup></strong>,
-  <a href="https://sunovivid.github.io/" target="_blank" rel="noopener noreferrer">
-    Donghoon Ahn<sup>*</sup>
-  </a>,
-  <a href="https://susunghong.github.io/" target="_blank" rel="noopener noreferrer">
-    Susung Hong<sup>*</sup>
-  </a>,
-  Jee Eun Kim,
-  <a href="https://cvlab.kaist.ac.kr/" target="_blank" rel="noopener noreferrer">
-    Seungryong Kim<sup>†</sup>
-  </a>, and
-  <a href="https://scholar.google.com/citations?user=aLYNnyoAAAAJ&hl"
-     target="_blank"
-     rel="noopener noreferrer">
-    Kyong Hwan Jin<sup>†</sup>
-  </a>
-  <span class="author-note"><sup>*</sup> Equal contribution</span>
-</div>
-
-<div class="publication-venue">
-  <em>43rd International Conference on Machine Learning</em>
-</div>
-
-<div class="publication-links">
-  <a
-    class="pub-link"
-    href="https://openreview.net/pdf?id=1XJqPy2LhA"
-    target="_blank"
-    rel="noopener noreferrer"
-  >
-    <span>📄</span> Paper
-  </a>
-
-  <a
-    class="pub-link"
-    href="https://hyeon-cho.github.io/TAG/"
-    target="_blank"
-    rel="noopener noreferrer"
-  >
-    <span>↗</span> Website
-  </a>
-
-  <a
-    class="pub-link"
-    href="https://github.com/hyeon-cho/Tangential-Amplifying-Guidance"
-    target="_blank"
-    rel="noopener noreferrer"
-  >
-    <span>⌘</span> Code
-  </a>
-</div>
-
-<p class="publication-summary">
-  We introduce <strong>TAG</strong>, a theoretically grounded,
-  training-free, computationally lightweight, and architecture-agnostic
-  guidance method that operates solely on trajectory signals without
-  modifying the underlying diffusion model.
-</p>
-  </td>
-</tr>
-
-
-<tr class="publication-row">
-  <!-- <td class="publication-visual">
-    <a href="https://byeonghunlee12.github.io/iRAG_page/"
-       target="_blank"
-       rel="noopener noreferrer"
-       aria-label="Open iRAG project website">
-      <div class="publication-thumb">
-        <img
-          class="publication-media"
-          src="images/iccv_sr.png"
-          alt="Overview figure for iRAG"
-        >
-      </div>
-    </a>
-  </td> -->
-
-  <td class="publication-content">
-    <div class="publication-meta">
-      <span class="venue-badge">ICCV 2025</span>
-      <span> Hawaii, USA 🇺🇸</span>
-    </div>
-
-<a class="publication-title"
-   href="https://byeonghunlee12.github.io/iRAG_page/"
-   target="_blank"
-   rel="noopener noreferrer">
-  Reference-based Super-Resolution via Image-based Retrieval-Augmented
-  Generation Diffusion
-</a>
-
-<div class="publication-authors">
-  <a href="https://scholar.google.com/citations?user=0VhcJXwAAAAJ&hl=ko"
-     target="_blank"
-     rel="noopener noreferrer">
-    Byeonghun Lee<sup>*</sup>
-  </a>,
-  <span class="first-author"><strong>Hyunmin Cho</strong></span><strong><sup>*</sup></strong>,
-  Hong Gyu Choi,
-  Soo Min Kang,
-  Iljun Ahn, and
-  <a href="https://scholar.google.com/citations?user=aLYNnyoAAAAJ&hl"
-     target="_blank"
-     rel="noopener noreferrer">
-    Kyong Hwan Jin<sup>†</sup>
-  </a>
-  <span class="author-note"><sup>*</sup> Equal contribution</span>
-</div>
-
-<div class="publication-venue">
-  <em>20th International Conference on Computer Vision</em>
-</div>
-
-<div class="publication-links">
-  <a class="pub-link"
-     href="https://openaccess.thecvf.com/content/ICCV2025/papers/Lee_Reference-based_Super-Resolution_via_Image-based_Retrieval-Augmented_Generation_Diffusion_ICCV_2025_paper.pdf"
-     target="_blank"
-     rel="noopener noreferrer">
-    <span>📄</span> Paper
-  </a>
-
-  <a class="pub-link"
-     href="https://byeonghunlee12.github.io/iRAG_page/"
-     target="_blank"
-     rel="noopener noreferrer">
-    <span>↗</span> Website
-  </a>
-
-  <a class="pub-link"
-     href="https://github.com/ByeonghunLee12/iRAG"
-     target="_blank"
-     rel="noopener noreferrer">
-    <span>⌘</span> Code
-  </a>
-</div>
-
-<p class="publication-summary">
-  We propose an image-based RAG framework <strong>(iRAG)</strong> for
-  realistic super-resolution, using a trainable hashing function to
-  retrieve either real-world or generated references from an LR query.
-</p>
-  </td>
-</tr>
-
-
-
-              </tbody>
-            </table>
-          </div>
-
-          <button style="border:0px transparent; background-color: transparent;outline:none;" type="button"
-            class="collapsible" data-toggle="collapse" data-target="#content-research-co" id="research">
-            <heading>✧ Co-Authored Publications</heading>
-          </button>
-          <div id="content-research-co" class="collapse in">
-            <table class="publication-list"
-  style="width:100%; border:0; border-collapse:separate; margin-right:auto; margin-left:auto;">
-              <tbody>
-
-                
-<tr class="publication-row">
-  <!-- <td class="publication-visual">
-    <div class="publication-thumb">
-      <img
-        class="publication-media"
-        src="images/eccv26_8420.png"
-        alt="Overview figure for ReAL"
-      >
-    </div>
-  </td> -->
-
-  <td class="publication-content">
-    <div class="publication-meta">
-      <span class="venue-badge">ECCV 2026</span>
-      <span> Malmö, Sweden 🇸🇪</span>
-    </div>
-<div class="publication-title">
-  ReAL: Reference-to-Image (R2I)-Aware Latent Diffusion for Image
-  Super-Resolution
-</div>
-
-<div class="publication-authors">
-  <a href="https://scholar.google.com/citations?user=0VhcJXwAAAAJ&hl=ko"
-     target="_blank"
-     rel="noopener noreferrer">
-    Byeonghun Lee
-  </a>,
-  <strong>Hyunmin Cho</strong>,
-  Sunghoon Im<sup>†</sup>, and
-  <a href="https://scholar.google.com/citations?user=aLYNnyoAAAAJ&hl"
-     target="_blank"
-     rel="noopener noreferrer">
-    Kyong Hwan Jin<sup>†</sup>
-  </a>
-</div>
-
-<div class="publication-venue">
-  <em>19th European Conference on Computer Vision</em>
-</div>
-
-
-<div class="publication-links">
-  <a class="pub-link" href="papers/5ReAL_7mb.pdf" aria-disabled="false">
-    <span>📄</span> Paper 
-    <!-- <small>coming soon</small> -->
-  </a>
-
-  <a class="pub-link" aria-disabled="true">
-    <span>↗</span> Website <small>coming soon</small>
-  </a>
-
-  <a class="pub-link" aria-disabled="true">
-    <span>⌘</span> Code <small>coming soon</small>
-  </a>
-</div>
-
-<!-- <div class="publication-links">
-  <span class="pub-link disabled">
-    <span>↗</span> Project <small>coming soon</small>
-  </span>
-</div> -->
-
-<p class="publication-summary">
-  <strong>ReAL grounds diffusion SR in retrieved visual references rather
-  than text priors.</strong> It encodes a matched reference once and
-  reuses its cached attention features throughout denoising, enabling
-  reference-driven texture and structure recovery without CFG.
-</p>
-  </td>
-</tr>
-
-<tr class="publication-row">
-  <!-- <td class="publication-visual">
-    <a href="https://wookyounghan.github.io/LosslessINR/"
-       target="_blank"
-       rel="noopener noreferrer"
-       aria-label="Open Lossless INR project website">
-      <div class="publication-thumb">
-        <video class="publication-media publication-media-small"
-               autoplay
-               loop
-               muted
-               playsinline>
-          <source src="images/lossless_inr_intro.mp4" type="video/mp4">
-        </video>
-      </div>
-    </a>
-  </td> -->
-
-  <td class="publication-content">
-    <div class="publication-meta">
-      <span class="venue-badge">CVPR 2025</span>
-      <span> Nashville, USA 🇺🇸</span>
-    </div>
-<a class="publication-title"
-   href="https://wookyounghan.github.io/LosslessINR/"
-   target="_blank"
-   rel="noopener noreferrer">
-  Towards Lossless Implicit Neural Representation via Bit Plane
-  Decomposition
-</a>
-
-<div class="publication-authors">
-  <a href="https://scholar.google.com/citations?user=kieVQZwAAAAJ&hl=en"
-     target="_blank"
-     rel="noopener noreferrer">
-    Woo Kyoung Han
-  </a>,
-  <a href="https://scholar.google.com/citations?user=0VhcJXwAAAAJ&hl=ko"
-     target="_blank"
-     rel="noopener noreferrer">
-    Byeonghun Lee
-  </a>,
-  <strong>Hyunmin Cho</strong>,
-  Sunghoon Im, and
-  <a href="https://scholar.google.com/citations?user=aLYNnyoAAAAJ&hl"
-     target="_blank"
-     rel="noopener noreferrer">
-    Kyong Hwan Jin<sup>†</sup>
-  </a>
-</div>
-
-<div class="publication-venue">
-  <em>38th Conference on Computer Vision and Pattern Recognition</em>
-</div>
-
-<div class="publication-links">
-  <a class="pub-link"
-     href="https://wookyounghan.github.io/LosslessINR/"
-     target="_blank"
-     rel="noopener noreferrer">
-    <span>↗</span> Project
-  </a>
-</div>
-
-<p class="publication-summary">
-  We introduce a bit-plane decomposition that enables
-  <strong>lossless implicit neural representations</strong>, allowing
-  exact reconstruction of digital signals with continuous networks.
-</p>
-  </td>
-</tr>
-
-
-              </tbody>
-            </table>
-          </div>
-<hr class="soft">
-          <button style="border:0px transparent; background-color: transparent;outline:none;" type="button"
-            class="collapsible" data-toggle="collapse" data-target="#content-education" id="education">
-            <heading>🎓 Education</heading>
-          </button>
-          <div id="content-education" class="collapse in">
-
-            <table border=0 class="bg_colour"
-              style="padding:20px;width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
-              <tbody>
-
-<tr>
-  <td colspan="2" style="padding:8px 10px 18px 10px;">
-    <div class="education-item">
-
-      <div class="education-logo">
-        <img src="images/korea_univ.png" alt="Korea University logo">
-      </div>
-
-      <div class="education-info">
-        <papertitle style="color:gray; font-size:17px;">
-          Integrated M.S. &amp; Ph.D. in Electrical Engineering
-        </papertitle>
-        <papertitle style="font-size:17px;">
-          | Korea University
-        </papertitle>
-        <br>
-        <span style="font-size:15px;">Mar. 2024 – Present</span>
-      </div>
-
-      <div class="education-details">
-        <strong>Research:</strong> Generative Models, World Models, and Hopfield Networks
-        <br>
-        <strong>Advisor:</strong> Prof.
-        <a href="https://ipa.korea.ac.kr/">Kyong Hwan Jin</a>
-      </div>
-
-    </div>
-  </td>
-</tr>
-
-<tr>
-  <td colspan="2" style="padding:18px 10px 14px 10px;">
-    <div class="education-item">
-
-      <div class="education-logo">
-        <img src="images/gachon_univ.png" alt="Gachon University logo">
-      </div>
-
-      <div class="education-info">
-        <papertitle style="color:gray; font-size:17px;">
-          B.S. in Software
-        </papertitle>
-        <papertitle style="font-size:17px;">
-          | Gachon University
-        </papertitle>
-        <br>
-        <span style="font-size:15px;">Mar. 2020 – Feb. 2024</span>
-      </div>
-
-      <div class="education-details">
-        <strong>Research:</strong> Image Super-Resolution
-        <br>
-        <strong>Advisor:</strong> Prof.
-        <a href="https://vcp-lab.khu.ac.kr/professor/">Kiho Choi</a>
-        <span style="color:gray;">(currently at Kyung Hee University)</span>
-      </div>
-
-    </div>
-  </td>
-</tr>
-              </tbody>
-            </table>
-          </div>
-          <hr class="soft">
-
-          <button style="border:0px transparent; background-color: transparent;outline:none;" type="button"
-            class="collapsible" data-toggle="collapse" data-target="#content-award" id="award">
-            <heading>🏆 Awards</heading>
-          </button>
-          <div id="content-award" class="collapse in">
-            <table border=0 class="bg_colour"
-              style="padding:20px;width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
-              <tbody>
-
-                <tr>
-                  <td>
-                    <ul>
-                      <!-- <li><strong>Best Paper Award</strong>, Summer Annual Conference of IEIE, 2025</li> -->
-                      <li><strong><span class="gold-prize">Gold Prize</span></strong>, 38th Workshop of Image Processing and Image
-                        Understanding (IPIU), 2026 <a href="https://ipa.korea.ac.kr/award/ipiu26_cho.pdf"
-   target="_blank"
-   rel="noopener noreferrer"
-   class="certificate-link">
-  Award Certificate ↗
-</a></li>
-                    </ul>
-                  </td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
-          <hr class="soft">
-
-          <button style="border:0px transparent; background-color: transparent;outline:none;" type="button"
-            class="collapsible" data-toggle="collapse" data-target="#content-project" id="project">
-            <heading>🛠️ Project</heading>
-          </button>
-          <div id="content-project" class="collapse in">
-            <table border=0 class="bg_colour"
-              style="padding:20px;width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
-              <tbody>
-
-                <tr>
-                  <td>
-                    <ul>
-                      <li><strong>Samsung Research (Next Generation Display Lab)</strong>, Development of user-preferred
-                        image-based image quality technology,
-                        2024.06-2025.05</li>
-                    </ul>
-                    <ul>
-                      <li><strong>Samsung Research (Next Generation Display Lab)</strong>, Uncertainty-Aware Temporal
-                        Relation Reasoning under Missing Video Evidence,
-                        2026.01-2026.12</li>
-                    </ul>
-                  </td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
-          <hr class="soft">
-
-          <button style="border:0px transparent; background-color: transparent;outline:none;" type="button"
-            class="collapsible" data-toggle="collapse" data-target="#content-patent" id="patent">
-            <heading>📜 Patents</heading>
-          </button>
-          <div id="content-patent" class="collapse in">
-            <table border=0 class="bg_colour"
-              style="padding:20px;width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
-              <tbody>
-
-                <tr>
-                  <td>
-                    <ul>
-                      <li style="margin-bottom: 10px;"> Method and Apparatus for Lossless Implicit Neural Representation
-                        Based on Bipolar Vector Labeling and Recursive Single Weight Operation
-                        <br>
-                        <strong>Hyunmin Cho</strong>,
-                        <a href="https://scholar.google.com/citations?user=aLYNnyoAAAAJ&hl">Kyong Hwan Jin</a>,
-                        Yongjun Lee,
-                        <a href="https://jwonkm.github.io/">Jiwon Kim</a>,
-                        <a href="https://scholar.google.com/citations?user=kieVQZwAAAAJ&hl">Woo Kyoung Han</a>
-                        <br>
-                        <span style="color:gray; font-size:small;">Korea Patent Application No. 10-2025-0150878</span>
-                      </li>
-                    </ul>
-                  </td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
-          <hr class="soft">
-
-          <table
-            style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
-            <tbody>
-              <tr>
-                <td style="padding:0px">
-                  <br>
-                  <p style="text-align:right;font-size:small;">
-                    Website templates from <a href="https://jonbarron.info/" target="_blank">Jon Barron</a>.</p>
-                </td>
-                </p>
-        </td>
-      </tr>
-    </tbody>
-  </table>
-  </td>
-  </tr>
-  </table>
+   </div>
+  </section>
+
+  <section class="recent-section" id="recent" aria-labelledby="recent-title">
+   <div class="section-heading"><div><p class="eyebrow">A few updates</p><h2 id="recent-title">Recent</h2></div></div>
+   <ol class="news-list">
+    <li><time datetime="2026">2026</time><p>Two papers at <strong>ECCV</strong>: <a href="https://hyeon-cho.github.io/Harmonic-line-Spectrum/" target="_blank" rel="noopener noreferrer">recurrent sinusoidal representations</a> and <a href="papers/5ReAL_7mb.pdf" target="_blank" rel="noopener noreferrer">reference-aware super-resolution</a>.</p></li>
+    <li><time datetime="2026">2026</time><p>Two papers at <strong>ICML</strong>: <a href="https://hyeon-cho.github.io/TAG/" target="_blank" rel="noopener noreferrer">Tangential Amplifying Guidance</a> and <a href="https://hyeon-cho.github.io/Balancing/" target="_blank" rel="noopener noreferrer">attention decomposition for diffusion</a>.</p></li>
+    <li id="award"><time datetime="2026">2026</time><p id="content-award"><strong>Gold Prize</strong> at the 38th Workshop of Image Processing and Image Understanding (IPIU). <a href="https://ipa.korea.ac.kr/award/ipiu26_cho.pdf" target="_blank" rel="noopener noreferrer">Certificate<span aria-hidden="true"> ↗</span></a></p></li>
+   </ol>
+  </section>
+
+  <details class="background-section" id="background">
+   <summary><span>Background &amp; experience</span><span class="details-symbol" aria-hidden="true"></span></summary>
+   <div class="background-content">
+    <section id="education" aria-labelledby="education-title">
+     <h2 id="education-title">Education</h2>
+     <div id="content-education" class="background-items">
+      <div><p class="background-date">Mar 2024–present</p><h3>Korea University</h3><p>Integrated M.S. &amp; Ph.D. in Electrical Engineering</p><p>Generative models, world models, and Hopfield networks.<br>Advisor: <a href="https://ipa.korea.ac.kr/">Kyong Hwan Jin</a></p></div>
+      <div><p class="background-date">Mar 2020–Feb 2024</p><h3>Gachon University</h3><p>B.S. in Software</p><p>Image super-resolution.<br>Advisor: <a href="https://vcp-lab.khu.ac.kr/professor/">Kiho Choi</a> (now at Kyung Hee University)</p></div>
+     </div>
+    </section>
+    <section id="project" aria-labelledby="project-title">
+     <h2 id="project-title">Research collaborations</h2>
+     <div id="content-project" class="background-items">
+      <div><p class="background-date">Jan–Dec 2026</p><h3>Samsung Research</h3><p>Next Generation Display Lab</p><p>Uncertainty-Aware Temporal Relation Reasoning under Missing Video Evidence</p></div>
+      <div><p class="background-date">Jun 2024–May 2025</p><h3>Samsung Research</h3><p>Next Generation Display Lab</p><p>Development of user-preferred image-based image quality technology</p></div>
+     </div>
+    </section>
+    <section id="patent" aria-labelledby="patent-title">
+     <h2 id="patent-title">Patent application</h2>
+     <div id="content-patent"><h3>Method and Apparatus for Lossless Implicit Neural Representation Based on Bipolar Vector Labeling and Recursive Single Weight Operation</h3><p><strong>Hyunmin Cho</strong>, <a href="https://scholar.google.com/citations?user=aLYNnyoAAAAJ&amp;hl">Kyong Hwan Jin</a>, Yongjun Lee, <a href="https://jwonkm.github.io/">Jiwon Kim</a>, <a href="https://scholar.google.com/citations?user=kieVQZwAAAAJ&amp;hl">Woo Kyoung Han</a></p><p class="background-date">Korea Patent Application No. 10-2025-0150878</p></div>
+    </section>
+   </div>
+  </details>
+ </main>
+ <footer class="site-footer page-shell">
+  <div class="footer-top"><a href="mailto:hyun_cho@korea.ac.kr">hyun_cho@korea.ac.kr<span aria-hidden="true"> ↗</span></a><div><a href="https://www.linkedin.com/in/chohyunmin/" target="_blank" rel="noopener noreferrer">LinkedIn<span aria-hidden="true"> ↗</span></a><a href="#top">Back to top<span aria-hidden="true"> ↑</span></a></div></div>
+  <div class="footer-bottom"><span>Hyunmin Cho <span aria-hidden="true">·</span> Korea University</span><span>Original template by <a href="https://jonbarron.info/" target="_blank" rel="noopener noreferrer">Jon Barron</a></span></div>
+ </footer>
 </body>
-
 </html>
