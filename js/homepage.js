@@ -1,20 +1,46 @@
 (() => {
   'use strict';
   const header = document.querySelector('.site-header');
+  const navigation = document.querySelector('.nav-shell');
   const filter = document.querySelector('.research-filter');
   const buttons = [...document.querySelectorAll('[data-filter]')];
   const additional = document.getElementById('content-research-co');
   const heading = document.getElementById('research-title');
   const status = document.getElementById('research-status');
   const showAll = document.querySelector('[data-show-all]');
-  const sectionLinks = [...document.querySelectorAll('.nav-links a[href^="#"]')];
+  const sectionLinks = [...navigation.querySelectorAll('a[href^="#"]')];
   const research = document.getElementById('research');
   const recent = document.getElementById('recent');
+  let currentLink = null;
+  let readyFrame;
+
+  function placeLens(shell, target) {
+    const container = shell.getBoundingClientRect();
+    const bounds = target.getBoundingClientRect();
+    shell.style.setProperty('--lens-x', `${bounds.left - container.left - shell.clientLeft}px`);
+    shell.style.setProperty('--lens-y', `${bounds.top - container.top - shell.clientTop}px`);
+    shell.style.setProperty('--lens-width', `${bounds.width}px`);
+    shell.style.setProperty('--lens-height', `${bounds.height}px`);
+  }
 
   function placeSelectionLens() {
     const selected = buttons.find(button => button.getAttribute('aria-pressed') === 'true');
-    filter.style.setProperty('--segment-x', `${selected.offsetLeft}px`);
-    filter.style.setProperty('--segment-width', `${selected.offsetWidth}px`);
+    placeLens(filter, selected);
+  }
+
+  // Layout changes snap into place; only selection changes glide.
+  function refreshLenses() {
+    cancelAnimationFrame(readyFrame);
+    navigation.classList.remove('is-ready');
+    filter.classList.remove('is-ready');
+    updateHeader();
+    placeLens(navigation, currentLink);
+    placeSelectionLens();
+    navigation.classList.add('has-lens');
+    readyFrame = requestAnimationFrame(() => {
+      navigation.classList.add('is-ready');
+      filter.classList.add('is-ready');
+    });
   }
 
   function select(view, announce = true) {
@@ -64,13 +90,7 @@
   filter.hidden = false;
   select('selected', false);
   document.documentElement.classList.add('has-publication-filter');
-  requestAnimationFrame(() => filter.classList.add('is-ready'));
-  // Re-measure for responsive layouts and enlarged text; the labels set the lens size.
-  if ('ResizeObserver' in window) {
-    const resize = new ResizeObserver(placeSelectionLens);
-    buttons.forEach(button => resize.observe(button));
-  }
-  window.addEventListener('resize', () => { placeSelectionLens(); updateHeader(); });
+  window.addEventListener('resize', refreshLenses);
   revealAnchor(Boolean(location.hash));
   window.addEventListener('hashchange', () => revealAnchor(true));
   // Anchor links still reveal their destination when the hash is already current.
@@ -84,17 +104,27 @@
     header.classList.toggle('is-scrolled', window.scrollY > 24);
     const boundary = Math.max(header.getBoundingClientRect().bottom + 36, parseFloat(getComputedStyle(document.documentElement).scrollPaddingTop) + 2);
     const atEnd = window.scrollY + window.innerHeight >= document.documentElement.scrollHeight - 5;
-    let current = null;
+    let current = '#top';
     if (research.getBoundingClientRect().top <= boundary) current = '#research';
     if (recent.getBoundingClientRect().top <= boundary || (atEnd && recent.getBoundingClientRect().top < window.innerHeight)) current = '#recent';
     sectionLinks.forEach(link => {
       if (link.getAttribute('href') === current) link.setAttribute('aria-current', 'location');
       else link.removeAttribute('aria-current');
     });
+    const nextLink = sectionLinks.find(link => link.getAttribute('href') === current);
+    if (nextLink !== currentLink) {
+      currentLink = nextLink;
+      placeLens(navigation, currentLink);
+    }
     ticking = false;
   }
   window.addEventListener('scroll', () => {
     if (!ticking) { requestAnimationFrame(updateHeader); ticking = true; }
   }, {passive: true});
-  updateHeader();
+  refreshLenses();
+  if ('ResizeObserver' in window) {
+    const resize = new ResizeObserver(refreshLenses);
+    [navigation, filter, ...sectionLinks, ...buttons].forEach(element => resize.observe(element));
+  }
+  if (document.fonts) document.fonts.ready.then(refreshLenses);
 })();
