@@ -5,7 +5,6 @@
   const filter = document.querySelector('.research-filter');
   const buttons = [...document.querySelectorAll('[data-filter]')];
   const additional = document.getElementById('content-research-co');
-  const heading = document.getElementById('research-title');
   const status = document.getElementById('research-status');
   const showAll = document.querySelector('[data-show-all]');
   const sectionLinks = [...navigation.querySelectorAll('a[href^="#"]')];
@@ -46,7 +45,6 @@
   function select(view, announce = true) {
     const all = view === 'all';
     additional.hidden = !all;
-    heading.textContent = all ? 'All publications' : 'Selected research';
     buttons.forEach(button => button.setAttribute('aria-pressed', String(button.dataset.filter === view)));
     showAll.hidden = all;
     placeSelectionLens();
